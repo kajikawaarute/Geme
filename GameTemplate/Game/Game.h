@@ -11,6 +11,8 @@ public:
 	~Game();
 	bool Start();
 	void Update();
-	prefab::CSkinModelRender* m_skinModelRender = nullptr;		//スキンモデルレンダラー。
+	prefab::CSkinModelRender* m_skinModel = nullptr;
+	CVector3 m_position = CVector3::Zero;
+	
 };
 
