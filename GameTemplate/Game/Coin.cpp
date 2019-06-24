@@ -10,3 +10,6 @@ Coin::Coin()
 Coin::~Coin()
 {
 }
+
+
+

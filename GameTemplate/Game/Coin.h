@@ -5,9 +5,5 @@ public:
 	Coin();
 	~Coin();
 
-	bool Start();
-	void Update();
-
-
 };
 
