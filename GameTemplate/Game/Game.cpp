@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "Game.h"
+
 #include "tkEngine/light/tkDirectionLight.h"
 
 CVector3 cameraPos = { 0.0f, 70.0f, 200.0f };
@@ -22,6 +23,7 @@ bool Game::Start()
 	MainCamera().Update();
 	m_skinModelRender = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModelRender->Init(L"modelData/unityChan.cmo");
+
 	
 	return true;
 }
