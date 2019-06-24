@@ -1,6 +1,6 @@
 #include "stdafx.h"
 #include "Player.h"
-
+#include "Bullet.h"
 
 Player::Player()
 {
@@ -23,18 +23,46 @@ bool Player::Start()
 
 void Player::Move()
 {
+	float LStick_x = Pad(0).GetLStickXF() * 200.0f;
+	float LStick_y = Pad(0).GetLStickYF() * 200.0f;
+
+	//カメラの前方向と右方向を取得
+	CVector3 cameraFoward = MainCamera().GetForward();
+	CVector3 cameraRight = MainCamera().GetRight();
+
+	//XZ平面での前方向と右方向に変換する
+	cameraFoward.y = 0.0f;
+	cameraFoward.Normalize();
+	cameraRight.y = 0.0f;
+	cameraRight.Normalize();
+
+	//XZ成分の移動速度をクリア
 	m_moveSpeed.x = 0;
 	m_moveSpeed.y = 0;
 	m_moveSpeed.z = 0;
 
-	m_moveSpeed.x = Pad(0).GetLStickXF() * 100.0f;
-	m_moveSpeed.z = Pad(0).GetLStickYF() * 100.0f;
+	m_moveSpeed += cameraFoward * LStick_y;
+	m_moveSpeed += cameraRight * LStick_x;
 
-	m_position = m_charCon.Execute(m_moveSpeed);
-	m_skinModel->SetPosition(m_position);
+	//弾丸を撃つ
+	if (Pad(0).IsTrigger(enButtonB)) {
+		bl = NewGO<Bullet>(0, "bullet");
+		bl->GetPos() = m_position;
+		bl->SetSpd(cameraFoward, 35.0f);
+	}
+
+	CQuaternion qRot;
+	qRot.SetRotation({ 1.0f, 0.0f, 0.0f }, cameraRight);
+	m_rotation = qRot;
+
+	
 }
 
 void Player::Update()
 {
 	Move();
+
+	m_position = m_charCon.Execute(m_moveSpeed);
+	m_skinModel->SetPosition(m_position);
+	m_skinModel->SetRotation(m_rotation);
 }
