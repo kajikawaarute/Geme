@@ -32,6 +32,7 @@
     <ClCompile Include="Fade.cpp" />
     <ClCompile Include="mTimer.cpp" />
     <ClCompile Include="Coin.cpp" />
+    <ClCompile Include="PlayerHP.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -49,6 +50,7 @@
     <ClInclude Include="Player.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="GameCamera.h" />
+    <ClInclude Include="PlayerHP.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -79,10 +81,19 @@
     <ImageContentTask Include="Assets\sprite\botanose.png">
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
+    <ImageContentTask Include="Assets\sprite\heart.png" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Assets\sound\Title.wav">
       <Filter>Assets\sound</Filter>
     </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\sprite\heart2.png">
+      <Filter>Assets\sprite</Filter>
+    </Image>
+    <Image Include="Assets\sprite\heart3.png">
+      <Filter>Assets\sprite</Filter>
+    </Image>
   </ItemGroup>
 </Project>
