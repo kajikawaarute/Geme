@@ -1,26 +1,25 @@
 #pragma once
-
-class Bullet;
-
-class Player : public IGameObject
+class Enemy : public IGameObject
 {
 public:
-	Player();
-	~Player();
+	Enemy();
+	~Enemy();
 	bool Start();
 	void Update();
 	void Move();
+	void Death();
 	CVector3& GetPos()
 	{
 		return m_position;
 	}
+
 private:
-	prefab::CSkinModelRender* m_skinModel = nullptr;		//スキンモデルレンダラー。
+	prefab::CSkinModelRender* m_skinModel = nullptr;
 	CVector3 m_position = CVector3::Zero;
 	CVector3 m_moveSpeed = CVector3::Zero;
 	CQuaternion m_rotation = CQuaternion::Identity;
+	CQuaternion m_qRot = CQuaternion::Identity;
 	CCharacterController m_charCon;
-	Bullet* bl = nullptr;
-	int bulletCount = 10;
+	float m_timer = 0;
 };
 

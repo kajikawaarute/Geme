@@ -46,9 +46,12 @@ void Player::Move()
 
 	//’eŠÛ‚ðŒ‚‚Â
 	if (Pad(0).IsTrigger(enButtonB)) {
-		bl = NewGO<Bullet>(0, "bullet");
-		bl->GetPos() = m_position;
-		bl->SetSpd(cameraFoward, 35.0f);
+		if (bulletCount != 0) {
+			bl = NewGO<Bullet>(0, "bullet");
+			bl->GetPos() = m_position;
+			bl->SetSpd(cameraFoward, 35.0f);
+			bulletCount--;
+		}
 	}
 
 	CQuaternion qRot;

@@ -33,6 +33,8 @@
     <ClCompile Include="mTimer.cpp" />
     <ClCompile Include="Coin.cpp" />
     <ClCompile Include="PlayerHP.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="EnemyCreate.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -51,6 +53,8 @@
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="GameCamera.h" />
     <ClInclude Include="PlayerHP.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="EnemyCreate.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -82,18 +86,12 @@
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
     <ImageContentTask Include="Assets\sprite\heart.png" />
+    <ImageContentTask Include="Assets\sprite\heart2.png" />
+    <ImageContentTask Include="Assets\sprite\heart3.png" />
   </ItemGroup>
   <ItemGroup>
     <Media Include="Assets\sound\Title.wav">
       <Filter>Assets\sound</Filter>
     </Media>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="Assets\sprite\heart2.png">
-      <Filter>Assets\sprite</Filter>
-    </Image>
-    <Image Include="Assets\sprite\heart3.png">
-      <Filter>Assets\sprite</Filter>
-    </Image>
   </ItemGroup>
 </Project>

@@ -1764,6 +1764,8 @@
   <ItemGroup>
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="Coin.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="EnemyCreate.cpp" />
     <ClCompile Include="Fade.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameCamera.cpp" />
@@ -1799,6 +1801,8 @@
   <ItemGroup>
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="Coin.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="EnemyCreate.h" />
     <ClInclude Include="Fade.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameCamera.h" />

@@ -10,6 +10,8 @@ PlayerHP::PlayerHP()
 PlayerHP::~PlayerHP()
 {
 	DeleteGO(m_sprite);
+	DeleteGO(m_sprite2);
+	DeleteGO(m_sprite3);
 }
 
 bool PlayerHP::Start()
