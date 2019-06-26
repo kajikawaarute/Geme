@@ -81,8 +81,8 @@
     </ImageContentTask>
   </ItemGroup>
   <ItemGroup>
-    <Media Include="Assets\sound\Title.wav">
+    <CustomBuild Include="Assets\sound\Title.wav">
       <Filter>Assets\sound</Filter>
-    </Media>
+    </CustomBuild>
   </ItemGroup>
 </Project>

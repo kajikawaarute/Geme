@@ -21,24 +21,24 @@ Title::~Title()
 bool Title::Start()
 {
 
+	//•¶š
 	m_spriteRender2 = NewGO<prefab::CSpriteRender>(0);
 	m_spriteRender2->Init(L"sprite/title.dds", 1280.0f, 720.0f);
 	m_spriteRender2->SetPosition(m_position2);
 
+	//”wŒi
 	m_spriteRender = NewGO<prefab::CSpriteRender>(0);
 	m_spriteRender->Init(L"sprite/Game.dds", 1280.0f, 720.0f);
 	m_position.y = 340;
 	m_spriteRender->SetPosition(m_position);
 
+	//•¶š
 	m_spriteRender1 = NewGO<prefab::CSpriteRender>(0);
 	m_spriteRender1->Init(L"sprite/botanose.dds", 1280.0f, 720.0f);
 	m_position1.y = -300;
 	m_spriteRender1->SetPosition(m_position1);
 
-
-	/*sound = FindGO<Sound>("Sound");
-	sound->TitleSound();
-*/
+	
 	fade = FindGO<Fade>("Fade");
 	return true;
 }
@@ -46,6 +46,8 @@ bool Title::Start()
 
 void Title::Update()
 {
+
+	//•¶š‚ª“®‚­ˆ—
 	m_timer++;
 	if (m_timer == 1) {
 		m_position.y -= 1.0f;
@@ -53,6 +55,7 @@ void Title::Update()
 		m_timer = 0;
 	}
 
+	//ƒ{ƒ^ƒ“‰Ÿ‚·‚ÆƒQ[ƒ€‚És‚­
 	if (Pad(0).IsPress(enButtonA) == true) {
 		NewGO<Game>(0, "Game");
 		fade->StartFadeOut();

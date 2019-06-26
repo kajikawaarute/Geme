@@ -31,15 +31,14 @@ void Sound::TitleSound()
 }
 
 
-//void Sound::TitleSound()
-//{
-//	m_Sound1 = NewGO<prefab::CSoundSource>(0);
-//	m_Sound1->Init(L"sound/.wav");
-//	m_Sound1->Play(false);
-//}
+void Sound::ButtonStart()
+{
+	/*m_Sound1 = NewGO<prefab::CSoundSource>(0);
+	m_Sound1->Init(L"sound/.wav");
+	m_Sound1->Play(false);*/
+}
 
 
 void Sound::Update()
 {
-
 }

@@ -1827,7 +1827,9 @@
     <ImageContentTask Include="Assets\sprite\Game.png" />
   </ItemGroup>
   <ItemGroup>
-    <Media Include="Assets\sound\Title.wav" />
+    <CustomBuild Include="Assets\sound\Title.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

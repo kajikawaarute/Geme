@@ -11,6 +11,8 @@ public:
 	~Game();
 	bool Start();
 	void Update();
+
+	int m_timer = 0;
 	prefab::CSkinModelRender* m_skinModel = nullptr;
 	CVector3 m_position = CVector3::Zero;
 	
