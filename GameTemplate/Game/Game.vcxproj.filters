@@ -28,9 +28,7 @@
     <ClCompile Include="Title.cpp" />
     <ClCompile Include="GameClear.cpp" />
     <ClCompile Include="GameOver.cpp" />
-    <ClCompile Include="Sound.cpp" />
     <ClCompile Include="Fade.cpp" />
-    <ClCompile Include="mTimer.cpp" />
     <ClCompile Include="Coin.cpp" />
     <ClCompile Include="PlayerHP.cpp" />
     <ClCompile Include="Enemy.cpp" />
@@ -45,16 +43,14 @@
     <ClInclude Include="Title.h" />
     <ClInclude Include="GameClear.h" />
     <ClInclude Include="GameOver.h" />
-    <ClInclude Include="Sound.h" />
     <ClInclude Include="Fade.h" />
-    <ClInclude Include="mTimer.h" />
-    <ClInclude Include="Coin.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="GameCamera.h" />
     <ClInclude Include="PlayerHP.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="EnemyCreate.h" />
+    <ClInclude Include="Coin.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -91,6 +87,9 @@
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="Assets\sound\Title.wav">
+      <Filter>Assets\sound</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Assets\sound\Button.wav">
       <Filter>Assets\sound</Filter>
     </CustomBuild>
   </ItemGroup>

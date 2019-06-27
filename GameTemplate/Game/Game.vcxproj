@@ -1772,9 +1772,7 @@
     <ClCompile Include="GameClear.cpp" />
     <ClCompile Include="GameOver.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="mTimer.cpp" />
     <ClCompile Include="PlayerHP.cpp" />
-    <ClCompile Include="Sound.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -1809,10 +1807,8 @@
     <ClInclude Include="Player.h" />
     <ClInclude Include="GameClear.h" />
     <ClInclude Include="GameOver.h" />
-    <ClInclude Include="mTimer.h" />
     <ClInclude Include="PlayerHP.h" />
     <CLInclude Include="resource.h" />
-    <ClInclude Include="Sound.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="Title.h" />
     <ResourceCompile Include="Game.rc" />
@@ -1843,6 +1839,11 @@
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\heart2.png" />
     <ImageContentTask Include="Assets\sprite\heart3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Assets\sound\Button.wav">
+      <FileType>Document</FileType>
+    </CustomBuild>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
