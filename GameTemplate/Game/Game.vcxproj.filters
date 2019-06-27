@@ -35,6 +35,7 @@
     <ClCompile Include="PlayerHP.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="EnemyCreate.cpp" />
+    <ClCompile Include="Stage.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -55,6 +56,7 @@
     <ClInclude Include="PlayerHP.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="EnemyCreate.h" />
+    <ClInclude Include="Stage.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -69,6 +71,9 @@
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
     <MeshContentTask Include="Assets\modelData\coin.fbx">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\stage.fbx">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
   </ItemGroup>

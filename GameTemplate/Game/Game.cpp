@@ -7,7 +7,7 @@
 #include "Coin.h"
 #include "PlayerHP.h"
 #include "EnemyCreate.h"
-
+#include "Stage.h"
 CVector3 cameraPos = { 0.0f, 70.0f, 200.0f };
 CVector3 cameraTarget;
 Game::Game()
@@ -17,8 +17,7 @@ Game::Game()
 	NewGO<PlayerHP>(0, "ph");
 	NewGO<EnemyCreate>(0, "eneCreate");
 	//NewGO<Coin>(0, "Coin");
-	m_skinModel = NewGO<prefab::CSkinModelRender>(0);
-	m_skinModel->Init(L"modelData/unityChan.cmo");
+	NewGO<Stage>(0, "stage");
 }
 
 
@@ -31,6 +30,8 @@ Game::~Game()
 	PlayerHP* ph = FindGO<PlayerHP>("ph");
 	DeleteGO(ph);
 	EnemyCreate* eneCreate = FindGO<EnemyCreate>("eneCreate");
+	Stage* sg = FindGO<Stage>("stage");
+	DeleteGO(sg);
 }
 bool Game::Start()
 {
@@ -40,5 +41,4 @@ bool Game::Start()
 void Game::Update()
 {
 	//NewGO<Coin>(0, "Coin");
-	m_skinModel->SetPosition(m_position);
 }
