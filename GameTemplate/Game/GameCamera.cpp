@@ -22,7 +22,7 @@ bool GameCamera::Start()
 	m_toCameraPos.Set(0.0f, 250.0f, -500.0f);
 
 	MainCamera().SetNear(10.0f);
-	MainCamera().SetFar(1000.0f);
+	MainCamera().SetFar(10000.0f);
 	return true;
 }
 
