@@ -1,113 +1,68 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns:atg="http://atg.xbox.com" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Assets">
-      <UniqueIdentifier>{ed0b04a6-fecd-4a2c-a462-59a8f4639f36}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{8e114980-c1a3-4ada-ad7c-83caadf5daeb}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
-    </Filter>
-    <Filter Include="Assets\modelData">
-      <UniqueIdentifier>{06086914-6aa4-4cad-9b07-6f9d357f04df}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Assets\sprite">
-      <UniqueIdentifier>{a6ce300a-b532-440d-b914-b4661d3015ad}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Assets\sound">
-      <UniqueIdentifier>{73786849-4bab-4694-8f23-0dcfa7e2f15e}</UniqueIdentifier>
-    </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="Game.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="Bullet.cpp" />
-    <ClCompile Include="GameCamera.cpp" />
-    <ClCompile Include="Title.cpp" />
-    <ClCompile Include="GameClear.cpp" />
-    <ClCompile Include="GameOver.cpp" />
-    <ClCompile Include="Fade.cpp" />
-    <ClCompile Include="Coin.cpp" />
-    <ClCompile Include="PlayerHP.cpp" />
-    <ClCompile Include="Enemy.cpp" />
-    <ClCompile Include="EnemyCreate.cpp" />
-    <ClCompile Include="Coin2D.cpp" />
-    <ClCompile Include="Timer.cpp" />
-    <ClCompile Include="CoinCount.cpp" />
-    <ClCompile Include="EnemyBullet.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <CLInclude Include="resource.h">
-      <Filter>Resource Files</Filter>
-    </CLInclude>
-    <ClInclude Include="stdafx.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="Title.h" />
-    <ClInclude Include="GameClear.h" />
-    <ClInclude Include="GameOver.h" />
-    <ClInclude Include="Fade.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="Bullet.h" />
-    <ClInclude Include="GameCamera.h" />
-    <ClInclude Include="PlayerHP.h" />
-    <ClInclude Include="Enemy.h" />
-    <ClInclude Include="EnemyCreate.h" />
-    <ClInclude Include="Coin.h" />
-    <ClInclude Include="Coin2D.h" />
-    <ClInclude Include="Timer.h" />
-    <ClInclude Include="CoinCount.h" />
-    <ClInclude Include="EnemyBullet.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="Game.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <MeshContentTask Include="Assets\modelData\unityChan.fbx">
-      <Filter>Assets\modelData</Filter>
-    </MeshContentTask>
-    <MeshContentTask Include="Assets\modelData\Bullet.fbx">
-      <Filter>Assets\modelData</Filter>
-    </MeshContentTask>
-    <MeshContentTask Include="Assets\modelData\coin.fbx">
-      <Filter>Assets\modelData</Filter>
-    </MeshContentTask>
-    <MeshContentTask Include="Assets\modelData\yuka.fbx">
-      <Filter>Assets\modelData</Filter>
-    </MeshContentTask>
-    <MeshContentTask Include="Assets\modelData\EnemyBullet.fbx">
-      <Filter>Assets\modelData</Filter>
-    </MeshContentTask>
-  </ItemGroup>
-  <ItemGroup>
-    <ImageContentTask Include="Assets\sprite\dummy.png">
-      <Filter>Assets\sprite</Filter>
-    </ImageContentTask>
-    <ImageContentTask Include="Assets\sprite\title.png">
-      <Filter>Assets\sprite</Filter>
-    </ImageContentTask>
-    <ImageContentTask Include="Assets\sprite\Game.png">
-      <Filter>Assets\sprite</Filter>
-    </ImageContentTask>
-    <ImageContentTask Include="Assets\sprite\botanose.png">
-      <Filter>Assets\sprite</Filter>
-    </ImageContentTask>
+    <ImageContentTask Include="Assets\sprite\dummy.png" />
+    <ImageContentTask Include="Assets\sprite\title.png" />
+    <ImageContentTask Include="Assets\sprite\botanose.png" />
+    <ImageContentTask Include="Assets\sprite\Game.png" />
     <ImageContentTask Include="Assets\sprite\heart.png" />
     <ImageContentTask Include="Assets\sprite\heart2.png" />
     <ImageContentTask Include="Assets\sprite\heart3.png" />
-    <ImageContentTask Include="Assets\sprite\Coin.png">
-      <Filter>Assets\sprite</Filter>
-    </ImageContentTask>
+    <ImageContentTask Include="Assets\sprite\Coin.png" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="Assets\sound\Title.wav">
-      <Filter>Assets\sound</Filter>
-    </CustomBuild>
-    <CustomBuild Include="Assets\sound\Button.wav">
-      <Filter>Assets\sound</Filter>
-    </CustomBuild>
+    <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="Coin.cpp" />
+    <ClCompile Include="Coin2D.cpp" />
+    <ClCompile Include="CoinCount.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="EnemyBullet.cpp" />
+    <ClCompile Include="EnemyCreate.cpp" />
+    <ClCompile Include="Fade.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameCamera.cpp" />
+    <ClCompile Include="GameClear.cpp" />
+    <ClCompile Include="GameOver.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="PlayerHP.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="Title.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <MeshContentTask Include="Assets\modelData\Bullet.fbx" />
+    <MeshContentTask Include="Assets\modelData\coin.fbx" />
+    <MeshContentTask Include="Assets\modelData\EnemyBullet.fbx" />
+    <MeshContentTask Include="Assets\modelData\unityChan.fbx" />
+    <MeshContentTask Include="Assets\modelData\yuka.fbx" />
+    <MeshContentTask Include="Assets\modelData\Title.fbx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Bullet.h" />
+    <ClInclude Include="Coin.h" />
+    <ClInclude Include="Coin2D.h" />
+    <ClInclude Include="CoinCount.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="EnemyBullet.h" />
+    <ClInclude Include="EnemyCreate.h" />
+    <ClInclude Include="Fade.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="GameCamera.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="GameClear.h" />
+    <ClInclude Include="GameOver.h" />
+    <ClInclude Include="PlayerHP.h" />
+    <CLInclude Include="resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="Title.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Assets\sound\Title.wav" />
+    <CustomBuild Include="Assets\sound\Button.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Game.rc" />
   </ItemGroup>
 </Project>

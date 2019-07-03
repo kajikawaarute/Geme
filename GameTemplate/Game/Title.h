@@ -31,7 +31,6 @@ private:
 	//2D画像
 	prefab::CSpriteRender*m_spriteRender = nullptr;
 	prefab::CSpriteRender*m_spriteRender1 = nullptr;
-	prefab::CSpriteRender*m_spriteRender2 = nullptr;
 
 	//サウンド
 	prefab::CSoundSource* m_Sound = nullptr;
@@ -39,5 +38,8 @@ private:
 
 	//Unityちゃん
 	prefab::CSkinModelRender* CSkinmodel = nullptr;
+
+	//タイトル
+	prefab::CSkinModelRender* CSkinmodel1 = nullptr;
 };
 

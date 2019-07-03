@@ -14,9 +14,9 @@ Title::~Title()
 
 	DeleteGO(m_spriteRender);
 	DeleteGO(m_spriteRender1);
-	DeleteGO(m_spriteRender2);
 	DeleteGO(m_Sound);
 	DeleteGO(CSkinmodel);
+	DeleteGO(CSkinmodel1);
 
 }
 
@@ -51,6 +51,14 @@ bool Title::Start()
 	m_position3.y = -50;
 	CSkinmodel->SetPosition(m_position3);
 	CSkinmodel->SetScale({ 0.8f,0.8f,0.8f });
+
+	//タイトル
+	CSkinmodel1 = NewGO<prefab::CSkinModelRender>(2);
+	CSkinmodel1->Init(L"modelData/Title.cmo");
+	m_position2.z = -200;
+	m_position2.y = -50;
+	CSkinmodel1->SetPosition(m_position2);
+	CSkinmodel1->SetScale({ 0.8f,0.8f,0.8f });
 
 	//音楽再生
 	m_Sound = NewGO<prefab::CSoundSource>(0);

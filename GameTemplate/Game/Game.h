@@ -14,7 +14,6 @@ public:
 
 	float m_timer = 0;
 	prefab::CSkinModelRender* m_skinModel = nullptr;
-	prefab::CSkinModelRender* m_skinModel1 = nullptr;
 
 	float m_restTimer = 90.0f;
 	float GetRestTime() const
