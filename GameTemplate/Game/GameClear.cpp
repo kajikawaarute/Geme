@@ -22,4 +22,5 @@ bool GameClear::Start()
 
 void GameClear::Update()
 {
+
 }

@@ -33,6 +33,9 @@
     <ClCompile Include="PlayerHP.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="EnemyCreate.cpp" />
+    <ClCompile Include="Coin2D.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="CoinCount.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -51,6 +54,9 @@
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="EnemyCreate.h" />
     <ClInclude Include="Coin.h" />
+    <ClInclude Include="Coin2D.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="CoinCount.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -65,6 +71,9 @@
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
     <MeshContentTask Include="Assets\modelData\coin.fbx">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\yuka.fbx">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
   </ItemGroup>
@@ -84,6 +93,9 @@
     <ImageContentTask Include="Assets\sprite\heart.png" />
     <ImageContentTask Include="Assets\sprite\heart2.png" />
     <ImageContentTask Include="Assets\sprite\heart3.png" />
+    <ImageContentTask Include="Assets\sprite\Coin.png">
+      <Filter>Assets\sprite</Filter>
+    </ImageContentTask>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="Assets\sound\Title.wav">

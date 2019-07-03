@@ -1,4 +1,5 @@
 #pragma once
+class Game;
 class Timer : public IGameObject
 {
 public:
@@ -9,6 +10,11 @@ public:
 	bool Start();
 	void Update();
 
-	int m_timer = 0;
+private:
+	prefab::CFontRender* m_fontRender = nullptr;
+	CVector2 m_position = CVector2::Zero;
+	Game*m_Game;
+	int timer = 0;
 };
+
 

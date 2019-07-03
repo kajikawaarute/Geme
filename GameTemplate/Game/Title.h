@@ -24,6 +24,7 @@ private:
 	CVector3 m_position = CVector3::Zero;
 	CVector3 m_position1 = CVector3::Zero;
 	CVector3 m_position2 = CVector3::Zero;
+	CVector3 m_position3 = CVector3::Zero;
 
 	CQuaternion m_kaiten = CQuaternion::Identity;
 

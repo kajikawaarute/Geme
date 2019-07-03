@@ -1764,6 +1764,8 @@
   <ItemGroup>
     <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="Coin.cpp" />
+    <ClCompile Include="Coin2D.cpp" />
+    <ClCompile Include="CoinCount.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="EnemyCreate.cpp" />
     <ClCompile Include="Fade.cpp" />
@@ -1794,11 +1796,14 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Preview_Middle|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Preview_Low|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Title.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bullet.h" />
     <ClInclude Include="Coin.h" />
+    <ClInclude Include="Coin2D.h" />
+    <ClInclude Include="CoinCount.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="EnemyCreate.h" />
     <ClInclude Include="Fade.h" />
@@ -1810,6 +1815,7 @@
     <ClInclude Include="PlayerHP.h" />
     <CLInclude Include="resource.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Timer.h" />
     <ClInclude Include="Title.h" />
     <ResourceCompile Include="Game.rc" />
   </ItemGroup>
@@ -1817,6 +1823,7 @@
     <MeshContentTask Include="Assets\modelData\Bullet.fbx" />
     <MeshContentTask Include="Assets\modelData\coin.fbx" />
     <MeshContentTask Include="Assets\modelData\unityChan.fbx" />
+    <MeshContentTask Include="Assets\modelData\yuka.fbx" />
   </ItemGroup>
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\dummy.png" />
@@ -1844,6 +1851,9 @@
     <CustomBuild Include="Assets\sound\Button.wav">
       <FileType>Document</FileType>
     </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="Assets\sprite\Coin.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -23,28 +23,34 @@ Title::~Title()
 
 bool Title::Start()
 {
+	MainCamera().SetTarget(m_position3);
+	MainCamera().SetPosition({0.0f,0.0f,-400.0f});
+	MainCamera().Update();
 
 	//タイトル
-	m_spriteRender2 = NewGO<prefab::CSpriteRender>(0);
+	/*m_spriteRender2 = NewGO<prefab::CSpriteRender>(0);
 	m_spriteRender2->Init(L"sprite/title.dds", 1280.0f, 720.0f);
-	m_spriteRender2->SetPosition(m_position2);
+	m_spriteRender2->SetPosition(m_position2);*/
 
 	//文字
-	m_spriteRender = NewGO<prefab::CSpriteRender>(0);
+	m_spriteRender = NewGO<prefab::CSpriteRender>(1);
 	m_spriteRender->Init(L"sprite/Game.dds", 1280.0f, 720.0f);
 	m_position.y = 340;
 	m_spriteRender->SetPosition(m_position);
 
 	//文字
-	m_spriteRender1 = NewGO<prefab::CSpriteRender>(0);
+	m_spriteRender1 = NewGO<prefab::CSpriteRender>(1);
 	m_spriteRender1->Init(L"sprite/botanose.dds", 1280.0f, 720.0f);
 	m_position1.y = -300;
 	m_spriteRender1->SetPosition(m_position1);
 
 	//Unityちゃん表示
-	CSkinmodel = NewGO<prefab::CSkinModelRender>(0);
+	CSkinmodel = NewGO<prefab::CSkinModelRender>(2);
 	CSkinmodel->Init(L"modelData/unityChan.cmo");
-	CSkinmodel->SetPosition({ 1.0f,1.0f,1.0f });
+	m_position3.z = -200;
+	m_position3.y = -50;
+	CSkinmodel->SetPosition(m_position3);
+	CSkinmodel->SetScale({ 0.8f,0.8f,0.8f });
 
 	//音楽再生
 	m_Sound = NewGO<prefab::CSoundSource>(0);
@@ -59,6 +65,7 @@ bool Title::Start()
 
 void Title::Update()
 {
+	//CSkinmodel->SetPosition(m_position3);
 
 	//文字が動く処理
 	m_timer+=GameTime().GetFrameDeltaTime();
