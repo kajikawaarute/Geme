@@ -11,6 +11,7 @@
 #include "Coin2D.h"
 #include "GameOver.h"
 #include "CoinCount.h"
+#include "Stage.h"
 
 CVector3 cameraPos = { 0.0f, 70.0f, 200.0f };
 CVector3 cameraTarget;
