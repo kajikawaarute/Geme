@@ -36,6 +36,7 @@
     <ClCompile Include="Coin2D.cpp" />
     <ClCompile Include="Timer.cpp" />
     <ClCompile Include="CoinCount.cpp" />
+    <ClCompile Include="EnemyBullet.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CLInclude Include="resource.h">
@@ -57,6 +58,7 @@
     <ClInclude Include="Coin2D.h" />
     <ClInclude Include="Timer.h" />
     <ClInclude Include="CoinCount.h" />
+    <ClInclude Include="EnemyBullet.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -74,6 +76,9 @@
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
     <MeshContentTask Include="Assets\modelData\yuka.fbx">
+      <Filter>Assets\modelData</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\EnemyBullet.fbx">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
   </ItemGroup>

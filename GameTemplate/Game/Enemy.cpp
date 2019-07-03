@@ -2,6 +2,7 @@
 #include "Enemy.h"
 #include "Player.h"
 #include "Bullet.h"
+#include "EnemyBullet.h"
 
 Enemy::Enemy()
 {
@@ -17,7 +18,7 @@ bool Enemy::Start()
 {
 	m_skinModel = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModel->Init(L"modelData/unityChan.cmo");
-	m_charCon.Init(50.0f, 100.0f, m_position);
+	m_charCon.Init(20.0f, 100.0f, m_position);
 
 	return true;
 }
@@ -48,10 +49,22 @@ void Enemy::Death()
 		});
 }
 
+void Enemy::Shoot()
+{
+	m_bltimer++;
+	if (m_bltimer == 40) {
+		EnemyBullet* enebl = NewGO<EnemyBullet>(0);
+		enebl->Getpos() = m_position;
+		enebl->SetSpd({0.0f, 0.0f, -1.0f}, 35.0f);
+		m_bltimer = 0;
+	}
+}
+
 void Enemy::Update()
 {
 	Move();
 	Death();
+	Shoot();
 
 	//ˆê’èŠÔ‚Å“G‚ªÁ‚¦‚éB
 	m_timer += GameTime().GetFrameDeltaTime();
