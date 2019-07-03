@@ -8,6 +8,7 @@ public:
 	void Update();
 	void Move();
 	void Death();
+	void Shoot();
 	CVector3& GetPos()
 	{
 		return m_position;
@@ -21,5 +22,6 @@ private:
 	CQuaternion m_qRot = CQuaternion::Identity;
 	CCharacterController m_charCon;
 	float m_timer = 0;
+	int m_bltimer = 0;
 };
 
