@@ -1,25 +1,27 @@
 #include "stdafx.h"
 #include "Coin.h"
 #include "Player.h"
-
+#include "CoinCount.h"
 Coin::Coin()
 {
+	//コイン3D
+	m_skinModelrender = NewGO<prefab::CSkinModelRender>(0);
+	m_skinModelrender->Init(L"modelData/coin.cmo");
 }
 
 
 Coin::~Coin()
 {
 	DeleteGO(m_skinModelrender);
+
 }
 
 
 bool Coin::Start()
 {
-
-	m_skinModelrender = NewGO<prefab::CSkinModelRender>(0);
-	m_skinModelrender->Init(L"modelData/coin.cmo");
-
+	
 	player = FindGO<Player>("player");
+	CCount = FindGO<CoinCount>("CoinCount");
 	return true;
 }
 
@@ -58,7 +60,10 @@ void Coin::Update()
 	//プレイヤーとの当たり判定
 	CVector3 diff = player->GetPos() - m_position;
 	if (diff.Length() < 70) {
+		coinCount++;
+		CCount->Addcount(coinCount);
 		DeleteGO(this);
+	
 	}
 	
 }

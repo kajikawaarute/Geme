@@ -12,7 +12,18 @@ public:
 	bool Start();
 	void Update();
 
-	int m_timer = 0;
+	float m_timer = 0;
+	prefab::CSkinModelRender* m_skinModel = nullptr;
+	prefab::CSkinModelRender* m_skinModel1 = nullptr;
+
+	float m_restTimer = 90.0f;
+	float GetRestTime() const
+	{
+		return m_restTimer;
+	}
+
+	CVector3 m_position = CVector3::Zero;
+
 	
 };
 
