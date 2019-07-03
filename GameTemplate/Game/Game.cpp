@@ -29,6 +29,7 @@ Game::Game()
 	NewGO<EnemyBullet>(0, "enebl");
 	m_skinModel = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModel->Init(L"modelData/unityChan.cmo");
+	NewGO<Stage>(0, "stage");
 	
 }
 
