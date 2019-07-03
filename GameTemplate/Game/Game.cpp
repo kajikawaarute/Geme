@@ -33,7 +33,6 @@ Game::Game()
 	m_skinModel1 = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModel1->Init(L"modelData/yuka.cmo");
 	m_skinModel1->SetScale({ 9000.0f,9000.0f,9000.0f });
-	NewGO<Stage>(0, "stage");
 }
 
 
