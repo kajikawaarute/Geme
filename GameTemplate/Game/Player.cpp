@@ -38,7 +38,7 @@ void Player::Move()
 
 	//XZ¬•ª‚ÌˆÚ“®‘¬“x‚ğƒNƒŠƒA
 	m_moveSpeed.x = 0;
-	m_moveSpeed.y = 0;
+	m_moveSpeed.y -= 100;
 	m_moveSpeed.z = 0;
 
 	m_moveSpeed += cameraFoward * LStick_y;

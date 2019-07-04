@@ -9,5 +9,6 @@ public:
 	void Update();
 private:
 	prefab::CSkinModelRender*m_skinModel = nullptr;
+	CPhysicsStaticObject m_staticObject;
 };
 

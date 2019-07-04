@@ -7,7 +7,6 @@
 #include "Coin.h"
 #include "PlayerHP.h"
 #include "EnemyCreate.h"
-#include "EnemyBullet.h"
 #include "Coin2D.h"
 #include "GameOver.h"
 #include "CoinCount.h"
@@ -27,7 +26,6 @@ Game::Game()
 	NewGO<CoinCount>(0, "CoinCount");
 	NewGO<Timer>(0, "Timer");
 	//NewGO<Coin>(0, "Coin");
-	NewGO<EnemyBullet>(0, "enebl");
 	m_skinModel = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModel->Init(L"modelData/unityChan.cmo");
 	NewGO<Stage>(0, "stage");
@@ -45,8 +43,6 @@ Game::~Game()
 	DeleteGO(ph);
 	EnemyCreate* eneCreate = FindGO<EnemyCreate>("eneCreate");
 	DeleteGO(eneCreate);
-	EnemyBullet* enebl = FindGO<EnemyBullet>("enebl");
-	DeleteGO(enebl);
 	Stage* sg = FindGO<Stage>("stage");
 	DeleteGO(sg);
 }
