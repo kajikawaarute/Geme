@@ -55,10 +55,15 @@ bool Title::Start()
 	//タイトル
 	CSkinmodel1 = NewGO<prefab::CSkinModelRender>(2);
 	CSkinmodel1->Init(L"modelData/Title.cmo");
-	m_position2.z = -200;
-	m_position2.y = -50;
+	m_position2.z = -100;
+	m_position2.y = 10;
+	m_position2.x= -10;
+	CQuaternion pAddRot;
+	pAddRot.SetRotationDeg(CVector3::AxisX, 90.0f);
+	m_kaiten1 = pAddRot;
+	CSkinmodel1->SetRotation(m_kaiten1);
 	CSkinmodel1->SetPosition(m_position2);
-	CSkinmodel1->SetScale({ 0.8f,0.8f,0.8f });
+	CSkinmodel1->SetScale({ 2.7f,2.6f,2.0f });
 
 	//音楽再生
 	m_Sound = NewGO<prefab::CSoundSource>(0);
@@ -74,6 +79,11 @@ bool Title::Start()
 void Title::Update()
 {
 	//CSkinmodel->SetPosition(m_position3);
+	//プレイヤーの回転処理
+	CQuaternion qAddRot;
+	qAddRot.SetRotationDeg(CVector3::AxisY, 2.0f);
+	m_kaiten *= qAddRot;
+	CSkinmodel->SetRotation(m_kaiten);
 
 	//文字が動く処理
 	m_timer+=GameTime().GetFrameDeltaTime();

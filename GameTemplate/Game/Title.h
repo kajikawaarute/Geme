@@ -26,8 +26,6 @@ private:
 	CVector3 m_position2 = CVector3::Zero;
 	CVector3 m_position3 = CVector3::Zero;
 
-	CQuaternion m_kaiten = CQuaternion::Identity;
-
 	//2D‰æ‘œ
 	prefab::CSpriteRender*m_spriteRender = nullptr;
 	prefab::CSpriteRender*m_spriteRender1 = nullptr;
@@ -38,8 +36,10 @@ private:
 
 	//Unity‚¿‚á‚ñ
 	prefab::CSkinModelRender* CSkinmodel = nullptr;
+	CQuaternion m_kaiten = CQuaternion::Identity;
 
 	//ƒ^ƒCƒgƒ‹
 	prefab::CSkinModelRender* CSkinmodel1 = nullptr;
+	CQuaternion m_kaiten1 = CQuaternion::Identity;
 };
 
