@@ -17,7 +17,7 @@ Enemy::~Enemy()
 bool Enemy::Start()
 {
 	m_skinModel = NewGO<prefab::CSkinModelRender>(0);
-	m_skinModel->Init(L"modelData/unityChan.cmo");
+	m_skinModel->Init(L"modelData/Enemy.cmo");
 	m_charCon.Init(20.0f, 100.0f, m_position);
 
 	return true;

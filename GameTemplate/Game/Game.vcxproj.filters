@@ -40,6 +40,8 @@
     <MeshContentTask Include="Assets\modelData\unityChan.fbx" />
     <MeshContentTask Include="Assets\modelData\yuka.fbx" />
     <MeshContentTask Include="Assets\modelData\Title.fbx" />
+    <MeshContentTask Include="Assets\modelData\stage.fbx" />
+    <MeshContentTask Include="Assets\modelData\Enemy.fbx" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bullet.h" />
@@ -62,11 +64,8 @@
     <ClInclude Include="CoinCount.h" />
     <ClInclude Include="EnemyBullet.h" />
     <ClInclude Include="Stage.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ResourceCompile Include="Game.rc">
-      <Filter>Resource Files</Filter>
-    </ResourceCompile>
+    <ClInclude Include="Sound.h" />
+    <ClInclude Include="Title.h" />
   </ItemGroup>
   <ItemGroup>
     <MeshContentTask Include="Assets\modelData\unityChan.fbx">
@@ -84,15 +83,13 @@
     <MeshContentTask Include="Assets\modelData\EnemyBullet.fbx">
       <Filter>Assets\modelData</Filter>
     </MeshContentTask>
-    <MeshContentTask Include="Assets\modelData\stage.fbx">
-      <Filter>Assets\modelData</Filter>
-    </MeshContentTask>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="Assets\sound\Title.wav" />
     <CustomBuild Include="Assets\sound\Button.wav" />
   </ItemGroup>
   <ItemGroup>
+    <ResourceCompile Include="Game.rc" />
     <ResourceCompile Include="Game.rc" />
   </ItemGroup>
 </Project>
