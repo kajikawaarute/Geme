@@ -26,8 +26,6 @@ Game::Game()
 	NewGO<CoinCount>(0, "CoinCount");
 	NewGO<Timer>(0, "Timer");
 	//NewGO<Coin>(0, "Coin");
-	m_skinModel = NewGO<prefab::CSkinModelRender>(0);
-	m_skinModel->Init(L"modelData/unityChan.cmo");
 	NewGO<Stage>(0, "stage");
 	
 }
@@ -66,5 +64,4 @@ void Game::Update()
 		NewGO<GameOver>(0,"GameOver");
 		
 	}
-	m_skinModel->SetPosition(m_position);
 }

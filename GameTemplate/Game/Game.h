@@ -13,7 +13,6 @@ public:
 	void Update();
 
 	float m_timer = 0;
-	prefab::CSkinModelRender* m_skinModel = nullptr;
 
 	float m_restTimer = 90.0f;
 	float GetRestTime() const
