@@ -16,10 +16,14 @@ Enemy::~Enemy()
 
 bool Enemy::Start()
 {
-	m_skinModel = NewGO<prefab::CSkinModelRender>(0);
-	m_skinModel->Init(L"modelData/Enemy.cmo");
-	m_charCon.Init(20.0f, 100.0f, m_position);
+	m_animClip[enAnim_walk].Load(L"animData/enemy_walk.tka");
+	m_animClip[enAnim_walk].SetLoopFlag(true);
 
+	m_skinModel = NewGO<prefab::CSkinModelRender>(0);
+	m_skinModel->Init(L"modelData/Enemy.cmo", m_animClip, enAnim_Num);
+	m_skinModel->PlayAnimation(enAnim_walk);
+
+	m_charCon.Init(20.0f, 100.0f, m_position);
 	return true;
 }
 

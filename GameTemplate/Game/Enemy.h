@@ -23,5 +23,12 @@ private:
 	CCharacterController m_charCon;
 	float m_timer = 0;
 	int m_bltimer = 0;
+
+	enum EnAnimationClip {
+		enAnim_walk,	//歩きアニメーション
+		enAnim_Num		//アニメーションクリップの数
+	};
+
+	CAnimationClip m_animClip[enAnim_Num];
 };
 
