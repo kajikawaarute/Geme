@@ -1864,6 +1864,14 @@
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\Coin.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\effect\CoinEF.efk" />
+    <None Include="Assets\effect\CoinEF.efkproj" />
+    <None Include="Assets\effect\test1.efk" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\sound\coinGet.wav" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="$(VCTargetsPath)\BuildCustomizations\ImageContentTask.targets" />

@@ -150,5 +150,24 @@
     <Filter Include="Assets\sprite">
       <UniqueIdentifier>{da06a027-d11e-4271-bd46-28b7893285f9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Assets\effect">
+      <UniqueIdentifier>{19e39292-37aa-4163-aeda-72a3ab735430}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\effect\CoinEF.efkproj">
+      <Filter>Assets\effect</Filter>
+    </None>
+    <None Include="Assets\effect\CoinEF.efk">
+      <Filter>Assets\effect</Filter>
+    </None>
+    <None Include="Assets\effect\test1.efk">
+      <Filter>Assets\effect</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Assets\sound\coinGet.wav">
+      <Filter>Assets\sound</Filter>
+    </Media>
   </ItemGroup>
 </Project>

@@ -25,7 +25,6 @@ Game::Game()
 	NewGO<Coin2D>(0, "Coin2D");
 	NewGO<CoinCount>(0, "CoinCount");
 	NewGO<Timer>(0, "Timer");
-	//NewGO<Coin>(0, "Coin");
 	m_skinModel = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModel->Init(L"modelData/unityChan.cmo");
 	NewGO<Stage>(0, "stage");
@@ -45,6 +44,13 @@ Game::~Game()
 	DeleteGO(eneCreate);
 	Stage* sg = FindGO<Stage>("stage");
 	DeleteGO(sg);
+	Coin2D*coin2D = FindGO<Coin2D>("Coin2D");
+	DeleteGO(coin2D);
+	Timer*m_timer = FindGO<Timer>("Timer");
+	DeleteGO(m_timer);
+	CoinCount* coinCount = FindGO<CoinCount>("CoinCount");
+	DeleteGO(coinCount);
+
 }
 bool Game::Start()
 {
@@ -53,11 +59,14 @@ bool Game::Start()
 
 void Game::Update()
 {
-	/*m_timer += GameTime().GetFrameDeltaTime();
-	if (m_timer > 5) {
-		NewGO<Coin>(0, "Coin");
+	//postEffect::Tonemap().SetLuminance(0.02);
+
+
+	m_timer += GameTime().GetFrameDeltaTime();
+	if (m_timer > 2) {
+		m_coin =NewGO<Coin>(0, "Coin");
 		m_timer = 0;
-	}*/
+	}
 	float deltaTime = GameTime().GetFrameDeltaTime();
 	m_restTimer -= deltaTime;
 	if (m_restTimer < 0.0f) {
