@@ -14,7 +14,6 @@ public:
 	void Update();
 
 	float m_timer = 0;
-	prefab::CSkinModelRender* m_skinModel = nullptr;
 	Coin*m_coin = nullptr;
 	float m_restTimer = 60.0f;
 

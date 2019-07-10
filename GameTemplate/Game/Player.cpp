@@ -23,8 +23,8 @@ bool Player::Start()
 
 void Player::Move()
 {
-	float LStick_x = Pad(0).GetLStickXF() * 200.0f;
-	float LStick_y = Pad(0).GetLStickYF() * 200.0f;
+	float LStick_x = Pad(0).GetLStickXF() * 500.0f;
+	float LStick_y = Pad(0).GetLStickYF() * 500.0f;
 
 	//ƒJƒƒ‰‚Ì‘O•ûŒü‚Æ‰E•ûŒü‚ğæ“¾
 	CVector3 cameraFoward = MainCamera().GetForward();
@@ -49,7 +49,7 @@ void Player::Move()
 		if (bulletCount != 0) {
 			bl = NewGO<Bullet>(0, "bullet");
 			bl->GetPos() = m_position;
-			bl->SetSpd(cameraFoward, 35.0f);
+			bl->SetSpd(cameraFoward, 1000.0f);
 			bulletCount--;
 		}
 	}

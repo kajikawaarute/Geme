@@ -21,6 +21,6 @@ private:
 	CQuaternion m_rotation = CQuaternion::Identity;
 	CCharacterController m_charCon;
 	Bullet* bl = nullptr;
-	int bulletCount = 10;
+	int bulletCount = 1000;
 };
 

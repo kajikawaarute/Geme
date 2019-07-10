@@ -1,4 +1,5 @@
 #pragma once
+class Player;
 class Enemy : public IGameObject
 {
 public:
@@ -23,6 +24,8 @@ private:
 	CCharacterController m_charCon;
 	float m_timer = 0;
 	int m_bltimer = 0;
+
+	Player* pl = nullptr;
 
 	enum EnAnimationClip {
 		enAnim_walk,	//歩きアニメーション
