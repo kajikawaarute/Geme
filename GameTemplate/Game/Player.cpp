@@ -15,8 +15,9 @@ Player::~Player()
 bool Player::Start()
 {
 	m_skinModel = NewGO<prefab::CSkinModelRender>(0);
-	m_skinModel->Init(L"modelData/unityChan.cmo");
+	m_skinModel->Init(L"modelData/Player.cmo");
 	m_charCon.Init(40.0f, 100.0f, m_position);
+	m_skinModel->SetShadowCasterFlag(true);
 
 	return true;
 }

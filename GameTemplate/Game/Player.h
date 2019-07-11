@@ -22,5 +22,6 @@ private:
 	CCharacterController m_charCon;
 	Bullet* bl = nullptr;
 	int bulletCount = 1000;
+
 };
 

@@ -86,6 +86,9 @@
     <MeshContentTask Include="Assets\modelData\Enemy2.fbx">
       <Filter>Assets\modeData</Filter>
     </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\Player.fbx">
+      <Filter>Assets\modeData</Filter>
+    </MeshContentTask>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bullet.h" />

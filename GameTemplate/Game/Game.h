@@ -18,7 +18,7 @@ public:
 	float m_timer = 0;
 	Coin*m_coin = nullptr;
 	float m_restTimer = 60.0f;
-
+	prefab::CDirectionLight* m_Light = nullptr;
 	float GetRestTime() const
 	{
 		return m_restTimer;

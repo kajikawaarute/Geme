@@ -1834,6 +1834,7 @@
     <MeshContentTask Include="Assets\modelData\Enemy.fbx" />
     <MeshContentTask Include="Assets\modelData\Enemy2.fbx" />
     <MeshContentTask Include="Assets\modelData\EnemyBullet.fbx" />
+    <MeshContentTask Include="Assets\modelData\Player.fbx" />
     <MeshContentTask Include="Assets\modelData\stage.fbx" />
     <MeshContentTask Include="Assets\modelData\Title.fbx" />
     <MeshContentTask Include="Assets\modelData\unityChan.fbx" />
