@@ -1,59 +1,52 @@
 #include "stdafx.h"
-#include "Enemy.h"
+#include "Enemy2.h"
 #include "Player.h"
 #include "Bullet.h"
 #include "EnemyBullet.h"
 
-Enemy::Enemy()
+Enemy2::Enemy2()
 {
 }
 
 
-Enemy::~Enemy()
+Enemy2::~Enemy2()
 {
 	DeleteGO(m_skinModel);
 }
 
-bool Enemy::Start()
+bool Enemy2::Start()
 {
-	m_animClip[enAnim_walk].Load(L"animData/enemy_walk.tka");
-	m_animClip[enAnim_walk].SetLoopFlag(true);
-
 	m_skinModel = NewGO<prefab::CSkinModelRender>(0);
-	m_skinModel->Init(L"modelData/Enemy.cmo", m_animClip, enAnim_Num);
-	m_skinModel->PlayAnimation(enAnim_walk);
-
-	m_charCon.Init(20.0f, 100.0f, m_position);
+	m_skinModel->Init(L"modelData/unityChan.cmo");
+	m_chraCon.Init(30.0f, 50.0f, m_position);
 	return true;
 }
 
-void Enemy::Move()
+void Enemy2::Move()
 {
 	QueryGOs<Player>("player", [&](Player* pl)->bool {
 		CVector3 v = pl->GetPos() - m_position;
 		if (v.Length() > 10.0f) {
 			m_moveSpeed = v;
-			m_qRot.SetRotation({ 0.0f, 0.0f, 1.0f }, v);
-			m_rotation = m_qRot;
 		}
 		return true;
 		});
-	m_position = m_charCon.Execute(m_moveSpeed);
+	m_position = m_chraCon.Execute(m_moveSpeed);
 }
 
-void Enemy::Death()
+void Enemy2::Death()
 {
 	QueryGOs<Bullet>("bullet", [&](Bullet* bl)->bool {
 		CVector3 v = bl->GetPos() - m_position;
-		if (v.Length() < 40.0f) {
+		if (v.Length() < 50.0f) {
 			DeleteGO(this);
 			DeleteGO(bl);
 		}
 		return true;
-		});
+	});
 }
 
-void Enemy::Shoot()
+void Enemy2::Shoot()
 {
 	m_bltimer++;
 	if (m_bltimer == 40) {
@@ -64,11 +57,11 @@ void Enemy::Shoot()
 	}
 }
 
-void Enemy::Update()
+void Enemy2::Update()
 {
 	Move();
 	Death();
-	//Shoot();
+	Shoot();
 
 	//ˆê’èŽžŠÔ‚Å“G‚ªÁ‚¦‚éB
 	m_timer += GameTime().GetFrameDeltaTime();
@@ -77,5 +70,4 @@ void Enemy::Update()
 	}
 
 	m_skinModel->SetPosition(m_position);
-	m_skinModel->SetRotation(m_rotation);
 }

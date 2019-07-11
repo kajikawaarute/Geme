@@ -48,6 +48,7 @@
     <ClCompile Include="EnemyBullet.cpp" />
     <ClCompile Include="Stage.cpp" />
     <ClCompile Include="Title.cpp" />
+    <ClCompile Include="Enemy2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <MeshContentTask Include="Assets\modelData\Bullet.fbx">
@@ -103,6 +104,7 @@
     <ClInclude Include="Stage.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="Title.h" />
+    <ClInclude Include="Enemy2.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sound.h" />

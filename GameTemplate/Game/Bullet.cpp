@@ -16,7 +16,7 @@ bool Bullet::Start()
 {
 	m_skinModel = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModel->Init(L"modelData/Bullet.cmo");
-	m_charCon.Init(20.0f, 10.0f, m_position);
+	m_charCon.Init(10.0f, 10.0f, m_position);
 
 	return true;
 }
