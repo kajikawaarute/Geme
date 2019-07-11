@@ -16,8 +16,11 @@ Enemy2::~Enemy2()
 
 bool Enemy2::Start()
 {
+	m_aninationClip[enAnim_rotation].Load(L"animData/enemy2_rotation.tka");
+	m_aninationClip[enAnim_rotation].SetLoopFlag(true);
+
 	m_skinModel = NewGO<prefab::CSkinModelRender>(0);
-	m_skinModel->Init(L"modelData/unityChan.cmo");
+	m_skinModel->Init(L"modelData/Enemy2.cmo", m_aninationClip, enAnim_Num);
 	m_chraCon.Init(30.0f, 50.0f, m_position);
 	return true;
 }

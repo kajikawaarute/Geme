@@ -3,6 +3,7 @@
 
 class Player;
 class CoinCount;
+class Game;
 
 class Coin :public IGameObject
 {
@@ -21,6 +22,7 @@ public:
 private:
 	Player*player = nullptr;
 	CoinCount*CCount = nullptr;
+	Game* ga = nullptr;
 
 	int m_timer = 0;
 	int coinCount = 0;

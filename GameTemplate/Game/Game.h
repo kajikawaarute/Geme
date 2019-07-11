@@ -13,6 +13,8 @@ public:
 	bool Start();
 	void Update();
 
+	int coinCount = 0;
+
 	float m_timer = 0;
 	Coin*m_coin = nullptr;
 	float m_restTimer = 60.0f;
@@ -21,7 +23,5 @@ public:
 	{
 		return m_restTimer;
 	}
-
-	CVector3 m_position = CVector3::Zero;
 };
 

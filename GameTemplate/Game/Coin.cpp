@@ -2,6 +2,7 @@
 #include "Coin.h"
 #include "Player.h"
 #include "CoinCount.h"
+#include "Game.h"
 #include "tkEngine/light/tkDirectionLight.h"
 Coin::Coin()
 {
@@ -82,6 +83,8 @@ void Coin::Update()
 		m_Sound->Init(L"sound/CoinGet.wav");
 		m_Sound->Play(false);
 		coinCount++;
+		ga = FindGO<Game>("Game");
+		ga->coinCount++;
 		CCount->Addcount(coinCount);
 		DeleteGO(this);
 	
