@@ -9,6 +9,10 @@ public:
 	void Move();
 	void Death();
 	void Shoot();
+	CVector3& GetPos()
+	{
+		return m_position;
+	}
 private:
 	prefab::CSkinModelRender* m_skinModel = nullptr;
 	CVector3 m_position = CVector3::Zero;

@@ -50,7 +50,7 @@ void Enemy2::Shoot()
 {
 	m_bltimer++;
 	if (m_bltimer == 40) {
-		EnemyBullet* enebl = NewGO<EnemyBullet>(0);
+		EnemyBullet* enebl = NewGO<EnemyBullet>(0 ,"enebl");
 		enebl->Getpos() = m_position;
 		//enebl->SetSpd(, 1000.0f);
 		m_bltimer = 0;
