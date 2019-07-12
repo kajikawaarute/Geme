@@ -9,12 +9,13 @@
             <Value>11</Value>
           </MaxGeneration>
           <Life>
-            <Center>40</Center>
-            <Max>40</Max>
-            <Min>40</Min>
+            <Center>60</Center>
+            <Max>60</Max>
+            <Min>60</Min>
           </Life>
           <GenerationTime>
-            <Max>5</Max>
+            <Center>1.500005</Center>
+            <Max>4</Max>
             <Min>1E-05</Min>
           </GenerationTime>
         </CommonValues>
@@ -27,8 +28,9 @@
                 <Min>-1</Min>
               </X>
               <Y>
-                <Max>1</Max>
-                <Min>-1</Min>
+                <Center>2</Center>
+                <Max>3</Max>
+                <Min>1</Min>
               </Y>
               <Z>
                 <Max>1</Max>
@@ -37,6 +39,9 @@
             </Location>
           </PVA>
         </LocationValues>
+        <ScalingValues>
+          <Type>1</Type>
+        </ScalingValues>
         <RendererCommonValues>
           <ColorTexture>../../../tkTools/Effekseer132/Sample/01_Pierre02/Texture/Star.png</ColorTexture>
           <FadeInType>1</FadeInType>

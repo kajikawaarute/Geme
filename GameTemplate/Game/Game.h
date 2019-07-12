@@ -4,6 +4,8 @@
 #include "tkEngine/physics/tkPhysicsGhostObject.h"
 #include "tkEngine/character/tkCharacterController.h"
 class Coin;
+class CoinCount;
+
 class Game : public IGameObject
 
 {
@@ -13,10 +15,12 @@ public:
 	bool Start();
 	void Update();
 
+
 	float m_timer = 0;
 	prefab::CSkinModelRender* m_skinModel = nullptr;
+	CoinCount*coinCount = nullptr;
 	Coin*m_coin = nullptr;
-	float m_restTimer = 60.0f;
+	float m_restTimer = 10.0f;
 
 	float GetRestTime() const
 	{

@@ -41,6 +41,7 @@ bool Coin::Start()
 
 void Coin::Update()
 {
+	//postEffect::Tonemap().SetLuminance(0.02f);
 
 	//コインの回転処理
 	CQuaternion qAddRot;
@@ -50,7 +51,7 @@ void Coin::Update()
 	
 	
 	//ランダムに発生
-	/*m_timer++;
+	m_timer++;
 	if (m_timer <= 30)
 	{
 		light += {1.8f / 30.0f, 1.8f / 30.0f, 0.12f / 30.0f};
@@ -60,15 +61,14 @@ void Coin::Update()
 		light -= {1.8f / 30.0f, 1.8f / 30.0f, 0.12f / 30.0f};
 	}
 	if (m_timer == 60) {
-		
-		
+
 		m_timer = 0;
 
-	}*/
+	}
 	
 	m_skinModelrender->SetPosition(m_position);
 
-	//m_skinModelrender->SetEmissionColor(light);
+	m_skinModelrender->SetEmissionColor(light);
 	//プレイヤーとの当たり判定
 	CVector3 diff = player->GetPos() - m_position;
 	if (diff.Length() < 70) {

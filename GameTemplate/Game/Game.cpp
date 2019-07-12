@@ -11,23 +11,24 @@
 #include "GameOver.h"
 #include "CoinCount.h"
 #include "Stage.h"
+#include "EnemyBullet.h"
+#include "GameClear.h"
 
 CVector3 cameraPos = { 0.0f, 70.0f, 200.0f };
 CVector3 cameraTarget;
 
 Game::Game()
 {
+
 	NewGO<Player>(0, "player");
 	NewGO<GameCamera>(0, "GC");
 	NewGO<PlayerHP>(0, "ph");
 	NewGO<EnemyCreate>(0, "eneCreate");
-	NewGO<Coin>(0, "Coin");
 	NewGO<Coin2D>(0, "Coin2D");
 	NewGO<CoinCount>(0, "CoinCount");
 	NewGO<Timer>(0, "Timer");
-	//NewGO<Coin>(0, "Coin");
-	m_skinModel = NewGO<prefab::CSkinModelRender>(0);
-	m_skinModel->Init(L"modelData/unityChan.cmo");
+	/*m_skinModel = NewGO<prefab::CSkinModelRender>(0);
+	m_skinModel->Init(L"modelData/unityChan.cmo");*/
 	NewGO<Stage>(0, "stage");
 	
 }
@@ -51,7 +52,9 @@ Game::~Game()
 	DeleteGO(m_timer);
 	CoinCount* coinCount = FindGO<CoinCount>("CoinCount");
 	DeleteGO(coinCount);
-
+	Coin* coin = FindGO<Coin>("Coin");
+	DeleteGO(coin);
+	
 }
 bool Game::Start()
 {
@@ -60,20 +63,21 @@ bool Game::Start()
 
 void Game::Update()
 {
-	//postEffect::Tonemap().SetLuminance(0.02);
-
+	//postEffect::Tonemap().SetLuminance(0.5);
 
 	m_timer += GameTime().GetFrameDeltaTime();
 	if (m_timer > 2) {
 		m_coin =NewGO<Coin>(0, "Coin");
 		m_timer = 0;
 	}
+
 	float deltaTime = GameTime().GetFrameDeltaTime();
 	m_restTimer -= deltaTime;
 	if (m_restTimer < 0.0f) {
 		m_restTimer = 0.0f;
+		//postEffect::Tonemap().SetLuminance(0.1);
+		//NewGO<GameOver>(0, "GameOver");
 		DeleteGO(this);
-		NewGO<GameOver>(0,"GameOver");
 		
 	}
 }

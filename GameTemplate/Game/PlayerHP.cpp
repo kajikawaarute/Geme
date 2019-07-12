@@ -30,14 +30,14 @@ bool PlayerHP::Start()
 
 void PlayerHP::Update()
 {
-	m_position.x = -550.0f;
-	m_position.y = 250.0f;
+	m_position.x = -570.0f;
+	m_position.y = -300.0f;
 
-	m_position2.x = -450.0f;
-	m_position2.y = 250.0f;
+	m_position2.x = -470.0f;
+	m_position2.y = -300.0f;
 
-	m_position3.x = -350.0f;
-	m_position3.y = 250.0f;
+	m_position3.x = -370.0f;
+	m_position3.y = -300.0f;
 
 	if (m_sprite != nullptr) {
 		m_sprite->SetPosition(m_position);

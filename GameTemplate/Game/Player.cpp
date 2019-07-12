@@ -23,6 +23,7 @@ bool Player::Start()
 
 void Player::Move()
 {
+
 	float LStick_x = Pad(0).GetLStickXF() * 200.0f;
 	float LStick_y = Pad(0).GetLStickYF() * 200.0f;
 
@@ -58,7 +59,6 @@ void Player::Move()
 	qRot.SetRotation({ 1.0f, 0.0f, 0.0f }, cameraRight);
 	m_rotation = qRot;
 
-	
 }
 
 void Player::Update()

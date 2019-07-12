@@ -1829,6 +1829,8 @@
     <MeshContentTask Include="Assets\modelData\coin.fbx" />
     <MeshContentTask Include="Assets\modelData\Enemy.fbx" />
     <MeshContentTask Include="Assets\modelData\EnemyBullet.fbx" />
+    <MeshContentTask Include="Assets\modelData\GameOver.fbx" />
+    <MeshContentTask Include="Assets\modelData\Overmoji.fbx" />
     <MeshContentTask Include="Assets\modelData\stage.fbx" />
     <MeshContentTask Include="Assets\modelData\Title.fbx" />
     <MeshContentTask Include="Assets\modelData\unityChan.fbx" />
@@ -1871,6 +1873,15 @@
   </ItemGroup>
   <ItemGroup>
     <Media Include="Assets\sound\coinGet.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="Assets\sprite\GameOver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="Assets\sprite\Fade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageContentTask Include="Assets\sprite\GameClear.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
