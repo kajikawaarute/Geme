@@ -11,6 +11,7 @@
 #include "GameOver.h"
 #include "CoinCount.h"
 #include "Stage.h"
+#include "BulletCount.h"
 
 CVector3 cameraPos = { 0.0f, 70.0f, 200.0f };
 CVector3 cameraTarget;
@@ -27,6 +28,7 @@ Game::Game()
 	NewGO<Timer>(0, "Timer");
 	//NewGO<Coin>(0, "Coin");
 	NewGO<Stage>(0, "stage");
+	NewGO<BulletCount>(0, "blCount");
 	m_Light = NewGO<prefab::CDirectionLight>(0);
 	m_Light->SetColor({ 0.5f,0.5f, 0.5f, 1.0f });
 	m_Light->SetDirection({ -0.707f,-0.707f,0.0f });
@@ -53,6 +55,8 @@ Game::~Game()
 	DeleteGO(m_timer);
 	CoinCount* coinCount = FindGO<CoinCount>("CoinCount");
 	DeleteGO(coinCount);
+	BulletCount* bc = FindGO<BulletCount>("blCount");
+	DeleteGO(bc);
 
 }
 bool Game::Start()

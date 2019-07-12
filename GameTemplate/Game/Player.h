@@ -14,6 +14,12 @@ public:
 	{
 		return m_position;
 	}
+	
+	int GetBullet()
+	{
+		return bulletCount;
+	}
+
 private:
 	prefab::CSkinModelRender* m_skinModel = nullptr;		//スキンモデルレンダラー。
 	CVector3 m_position = CVector3::Zero;
@@ -22,6 +28,5 @@ private:
 	CCharacterController m_charCon;
 	Bullet* bl = nullptr;
 	int bulletCount = 1000;
-
 };
 

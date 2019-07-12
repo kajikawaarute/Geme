@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Player.h"
 #include "Bullet.h"
+#include "BulletCount.h"
 
 Player::Player()
 {
