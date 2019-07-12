@@ -23,6 +23,9 @@ bool GameCamera::Start()
 
 	MainCamera().SetNear(10.0f);
 	MainCamera().SetFar(10000.0f);
+
+	//‚Î‚ËƒJƒƒ‰‚Ì‰Šú‰»
+	m_springCamera.Init(MainCamera(), 1000.0f, true, 5.0f);
 	return true;
 }
 
@@ -75,7 +78,11 @@ void GameCamera::Update()
 	//‹“_
 	CVector3 position = Target + m_toCameraPos;
 
-	MainCamera().SetTarget(Target);
+	m_springCamera.SetTarget(Target);
+	m_springCamera.SetPosition(position);
+	m_springCamera.Update();
+
+	/*MainCamera().SetTarget(Target);
 	MainCamera().SetPosition(position);
-	MainCamera().Update();
+	MainCamera().Update();*/
 }
