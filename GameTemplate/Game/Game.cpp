@@ -76,7 +76,7 @@ void Game::Update()
 	if (m_restTimer < 0.0f) {
 		m_restTimer = 0.0f;
 		//postEffect::Tonemap().SetLuminance(0.1);
-		//NewGO<GameOver>(0, "GameOver");
+		NewGO<GameOver>(0, "GameOver");
 		DeleteGO(this);
 		
 	}
