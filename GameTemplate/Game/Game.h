@@ -13,7 +13,10 @@ public:
 	bool Start();
 	void Update();
 
-	int coinCount = 0;
+	int coinCount = 0; //ボスが出てくるためのコインカウント
+	int damageCount = 0;	//プレイヤーのダメージカウント
+	float m_Timer = 0;
+
 
 	float m_timer = 0;
 	Coin*m_coin = nullptr;

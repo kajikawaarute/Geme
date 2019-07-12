@@ -41,7 +41,14 @@ void Boss::Death()
 		CVector3 v = bl->GetPos() - m_position;
 		if (v.Length() < 50.0f) {
 			bossHP_Count--;
-			if (bossHP_Count == 0)
+
+			//エフェクトの表示
+			prefab::CEffect* ef = NewGO<prefab::CEffect>(0);
+			ef->Play(L"effect/bossdown.efk");
+			CVector3 efPos = m_position;
+			efPos.y = 50.0f;
+			ef->SetPosition(efPos);
+
 			DeleteGO(this);
 			DeleteGO(bl);
 		}

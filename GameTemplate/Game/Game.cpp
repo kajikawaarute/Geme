@@ -76,10 +76,12 @@ void Game::Update()
 	}
 	float deltaTime = GameTime().GetFrameDeltaTime();
 	m_restTimer -= deltaTime;
-	if (m_restTimer < 0.0f) {
-		m_restTimer = 0.0f;
-		DeleteGO(this);
-		NewGO<GameOver>(0,"GameOver");
-		
+	if (m_restTimer < 0.0f || damageCount == 3) {
+		m_Timer += GameTime().GetFrameDeltaTime();
+		if (m_Timer > 2) {
+			m_restTimer = 0.0f;
+			DeleteGO(this);
+			NewGO<GameOver>(0, "GameOver");
+		}
 	}
 }

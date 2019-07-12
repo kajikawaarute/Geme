@@ -21,7 +21,7 @@ bool Enemy2::Start()
 
 	m_skinModel = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModel->Init(L"modelData/Enemy2.cmo", m_aninationClip, enAnim_Num);
-	m_chraCon.Init(30.0f, 50.0f, m_position);
+	m_chraCon.Init(33.0f, 50.0f, m_position);
 	return true;
 }
 
@@ -42,6 +42,13 @@ void Enemy2::Death()
 	QueryGOs<Bullet>("bullet", [&](Bullet* bl)->bool {
 		CVector3 v = bl->GetPos() - m_position;
 		if (v.Length() < 50.0f) {
+			//エフェクトの表示
+			prefab::CEffect* ef = NewGO<prefab::CEffect>(0);
+			ef->Play(L"effect/enemy2down.efk");
+			CVector3 efPos = m_position;
+			efPos.y = 50.0f;
+			ef->SetPosition(efPos);
+
 			DeleteGO(this);
 			DeleteGO(bl);
 		}

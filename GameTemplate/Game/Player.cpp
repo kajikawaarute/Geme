@@ -2,6 +2,8 @@
 #include "Player.h"
 #include "Bullet.h"
 #include "BulletCount.h"
+#include "PlayerHP.h"
+#include "Game.h"
 
 Player::Player()
 {
@@ -63,9 +65,22 @@ void Player::Move()
 	
 }
 
+void Player::Death()
+{
+	ga = FindGO<Game>("Game");
+	if (ga->damageCount == 3) {
+		prefab::CEffect* ef = NewGO<prefab::CEffect>(0);
+		ef->Play(L"effect/playerdown.efk");
+		CVector3 efPos = m_position;
+		efPos.y = 50.0f;
+		ef->SetPosition(efPos);
+	}
+}
+
 void Player::Update()
 {
 	Move();
+	Death();
 
 	m_position = m_charCon.Execute(m_moveSpeed);
 	m_skinModel->SetPosition(m_position);

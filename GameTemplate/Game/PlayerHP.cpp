@@ -4,6 +4,7 @@
 #include "Enemy.h"
 #include "Enemy2.h"
 #include "EnemyBullet.h"
+#include "Game.h"
 
 PlayerHP::PlayerHP()
 {
@@ -43,6 +44,7 @@ void PlayerHP::Update()
 	m_position3.y = 250.0f;
 
 	Player* pl = FindGO<Player>("player");
+	Game* ga = FindGO<Game>("Game");
 
 	//エネミー１に当たるとHPが減る。
 	QueryGOs<Enemy>("ene", [&](Enemy* ene)->bool {
@@ -51,14 +53,17 @@ void PlayerHP::Update()
 			if (m_sprite != nullptr) {
 				DeleteGO(m_sprite);
 				m_sprite = nullptr;
+				ga->damageCount++;
 			}
 			else if (m_sprite2 != nullptr) {
 				DeleteGO(m_sprite2);
 				m_sprite2 = nullptr;
+				ga->damageCount++;
 			}
 			else if (m_sprite3 != nullptr) {
 				DeleteGO(m_sprite3);
 				m_sprite3 = nullptr;
+				ga->damageCount++;
 			}
 		}
 
@@ -72,14 +77,17 @@ void PlayerHP::Update()
 			if (m_sprite != nullptr) {
 				DeleteGO(m_sprite);
 				m_sprite = nullptr;
+				ga->damageCount++;
 			}
 			else if (m_sprite2 != nullptr) {
 				DeleteGO(m_sprite2);
 				m_sprite2 = nullptr;
+				ga->damageCount++;
 			}
 			else if (m_sprite3 != nullptr) {
 				DeleteGO(m_sprite3);
 				m_sprite3 = nullptr;
+				ga->damageCount++;
 			}
 		}
 		return true;
@@ -93,17 +101,20 @@ void PlayerHP::Update()
 				DeleteGO(m_sprite);
 				DeleteGO(enebl);
 				m_sprite = nullptr;
+				ga->damageCount++;
 				
 			}
 			else if (m_sprite2 != nullptr) {
 				DeleteGO(m_sprite2);
 				DeleteGO(enebl);
 				m_sprite2 = nullptr;
+				ga->damageCount++;
 			}
 			else if (m_sprite3 != nullptr) {
 				DeleteGO(m_sprite3);
 				DeleteGO(enebl);
 				m_sprite3 = nullptr;
+				ga->damageCount++;
 			}
 		}
 		return true;

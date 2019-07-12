@@ -46,6 +46,13 @@ void Enemy::Death()
 	QueryGOs<Bullet>("bullet", [&](Bullet* bl)->bool {
 		CVector3 v = bl->GetPos() - m_position;
 		if (v.Length() < 40.0f) {
+			//エフェクトの表示
+			prefab::CEffect* ef = NewGO<prefab::CEffect>(0);
+			ef->Play(L"effect/enemydown.efk");
+			CVector3 efPos = m_position;
+			efPos.y = 50.0f;
+			ef->SetPosition(efPos);
+
 			DeleteGO(this);
 			DeleteGO(bl);
 		}
