@@ -1,4 +1,5 @@
 #pragma once
+#include "tkEngine/physics/tkPhysicsGhostObject.h"
 class Stage : public IGameObject
 {
 public:

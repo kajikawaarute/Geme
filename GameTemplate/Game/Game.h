@@ -15,18 +15,21 @@ public:
 	bool Start();
 	void Update();
 
+	int coinCount = 0; //ボスが出てくるためのコインカウント
+	int damageCount = 0;	//プレイヤーのダメージカウント
+	float m_Timer = 0;
+
+
 
 	float m_timer = 0;
-	prefab::CSkinModelRender* m_skinModel = nullptr;
-	CoinCount*coinCount = nullptr;
 	Coin*m_coin = nullptr;
+	float m_restTimer = 60.0f;
+	prefab::CDirectionLight* m_Light = nullptr;
 	float m_restTimer = 10.0f;
 
 	float GetRestTime() const
 	{
 		return m_restTimer;
 	}
-
-	CVector3 m_position = CVector3::Zero;
 };
 

@@ -1762,11 +1762,14 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Boss.cpp" />
     <ClCompile Include="Bullet.cpp" />
+    <ClCompile Include="BulletCount.cpp" />
     <ClCompile Include="Coin.cpp" />
     <ClCompile Include="Coin2D.cpp" />
     <ClCompile Include="CoinCount.cpp" />
     <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="Enemy2.cpp" />
     <ClCompile Include="EnemyBullet.cpp" />
     <ClCompile Include="EnemyCreate.cpp" />
     <ClCompile Include="Fade.cpp" />
@@ -1802,11 +1805,14 @@
     <ClCompile Include="Title.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Boss.h" />
     <ClInclude Include="Bullet.h" />
+    <ClInclude Include="BulletCount.h" />
     <ClInclude Include="Coin.h" />
     <ClInclude Include="Coin2D.h" />
     <ClInclude Include="CoinCount.h" />
     <ClInclude Include="Enemy.h" />
+    <ClInclude Include="Enemy2.h" />
     <ClInclude Include="EnemyBullet.h" />
     <ClInclude Include="EnemyCreate.h" />
     <ClInclude Include="Fade.h" />
@@ -1828,9 +1834,11 @@
     <MeshContentTask Include="Assets\modelData\Bullet.fbx" />
     <MeshContentTask Include="Assets\modelData\coin.fbx" />
     <MeshContentTask Include="Assets\modelData\Enemy.fbx" />
+    <MeshContentTask Include="Assets\modelData\Enemy2.fbx" />
     <MeshContentTask Include="Assets\modelData\EnemyBullet.fbx" />
     <MeshContentTask Include="Assets\modelData\GameOver.fbx" />
     <MeshContentTask Include="Assets\modelData\Overmoji.fbx" />
+    <MeshContentTask Include="Assets\modelData\Player.fbx" />
     <MeshContentTask Include="Assets\modelData\stage.fbx" />
     <MeshContentTask Include="Assets\modelData\Title.fbx" />
     <MeshContentTask Include="Assets\modelData\unityChan.fbx" />

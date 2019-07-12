@@ -1,6 +1,10 @@
 #include "stdafx.h"
 #include "PlayerHP.h"
-
+#include "Player.h"
+#include "Enemy.h"
+#include "Enemy2.h"
+#include "EnemyBullet.h"
+#include "Game.h"
 
 PlayerHP::PlayerHP()
 {
@@ -38,6 +42,83 @@ void PlayerHP::Update()
 
 	m_position3.x = -370.0f;
 	m_position3.y = -300.0f;
+
+	Player* pl = FindGO<Player>("player");
+	Game* ga = FindGO<Game>("Game");
+
+	//エネミー１に当たるとHPが減る。
+	QueryGOs<Enemy>("ene", [&](Enemy* ene)->bool {
+		CVector3 v = pl->GetPos() - ene->GetPos();
+		if (v.Length() < 80.0f) {
+			if (m_sprite != nullptr) {
+				DeleteGO(m_sprite);
+				m_sprite = nullptr;
+				ga->damageCount++;
+			}
+			else if (m_sprite2 != nullptr) {
+				DeleteGO(m_sprite2);
+				m_sprite2 = nullptr;
+				ga->damageCount++;
+			}
+			else if (m_sprite3 != nullptr) {
+				DeleteGO(m_sprite3);
+				m_sprite3 = nullptr;
+				ga->damageCount++;
+			}
+		}
+
+		return true;
+		});
+
+	//エネミー２に当たるとがHPが減る。
+	QueryGOs<Enemy2>("ene2", [&](Enemy2* ene2)->bool {
+		CVector3 v = pl->GetPos() - ene2->GetPos();
+		if (v.Length() < 80.0f) {
+			if (m_sprite != nullptr) {
+				DeleteGO(m_sprite);
+				m_sprite = nullptr;
+				ga->damageCount++;
+			}
+			else if (m_sprite2 != nullptr) {
+				DeleteGO(m_sprite2);
+				m_sprite2 = nullptr;
+				ga->damageCount++;
+			}
+			else if (m_sprite3 != nullptr) {
+				DeleteGO(m_sprite3);
+				m_sprite3 = nullptr;
+				ga->damageCount++;
+			}
+		}
+		return true;
+		});
+
+	//エネミーの弾丸に当たるとHPが減る。
+	QueryGOs<EnemyBullet>("enebl", [&](EnemyBullet* enebl)->bool {
+		CVector3 v = pl->GetPos() - enebl->Getpos();
+		if (v.Length() < 80.0f) {
+			if (m_sprite != nullptr) {
+				DeleteGO(m_sprite);
+				DeleteGO(enebl);
+				m_sprite = nullptr;
+				ga->damageCount++;
+				
+			}
+			else if (m_sprite2 != nullptr) {
+				DeleteGO(m_sprite2);
+				DeleteGO(enebl);
+				m_sprite2 = nullptr;
+				ga->damageCount++;
+			}
+			else if (m_sprite3 != nullptr) {
+				DeleteGO(m_sprite3);
+				DeleteGO(enebl);
+				m_sprite3 = nullptr;
+				ga->damageCount++;
+			}
+		}
+		return true;
+		});
 
 	if (m_sprite != nullptr) {
 		m_sprite->SetPosition(m_position);

@@ -1,10 +1,9 @@
 #pragma once
-class Player;
-class Enemy : public IGameObject
+class Enemy2 : public IGameObject
 {
 public:
-	Enemy();
-	~Enemy();
+	Enemy2();
+	~Enemy2();
 	bool Start();
 	void Update();
 	void Move();
@@ -14,24 +13,18 @@ public:
 	{
 		return m_position;
 	}
-
 private:
 	prefab::CSkinModelRender* m_skinModel = nullptr;
 	CVector3 m_position = CVector3::Zero;
 	CVector3 m_moveSpeed = CVector3::Zero;
-	CQuaternion m_rotation = CQuaternion::Identity;
-	CQuaternion m_qRot = CQuaternion::Identity;
-	CCharacterController m_charCon;
+	CCharacterController m_chraCon;
 	float m_timer = 0;
 	int m_bltimer = 0;
 
-	Player* pl = nullptr;
-
 	enum EnAnimationClip {
-		enAnim_walk,	//歩きアニメーション
+		enAnim_rotation,	//回転
 		enAnim_Num		//アニメーションクリップの数
 	};
-
-	CAnimationClip m_animClip[enAnim_Num];
+	CAnimationClip m_aninationClip[enAnim_Num];
 };
 

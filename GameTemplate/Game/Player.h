@@ -1,6 +1,7 @@
 #pragma once
 
 class Bullet;
+class Game;
 
 class Player : public IGameObject
 {
@@ -10,10 +11,17 @@ public:
 	bool Start();
 	void Update();
 	void Move();
+	void Death();
 	CVector3& GetPos()
 	{
 		return m_position;
 	}
+	
+	int GetBullet()
+	{
+		return bulletCount;
+	}
+
 private:
 	prefab::CSkinModelRender* m_skinModel = nullptr;		//スキンモデルレンダラー。
 	CVector3 m_position = CVector3::Zero;
@@ -21,6 +29,7 @@ private:
 	CQuaternion m_rotation = CQuaternion::Identity;
 	CCharacterController m_charCon;
 	Bullet* bl = nullptr;
-	int bulletCount = 10;
+	Game* ga = nullptr;
+	int bulletCount = 1000;
 };
 

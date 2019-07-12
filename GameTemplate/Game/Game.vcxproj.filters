@@ -57,15 +57,34 @@
     <ClCompile Include="EnemyBullet.cpp" />
     <ClCompile Include="Stage.cpp" />
     <ClCompile Include="Title.cpp" />
+    <ClCompile Include="Enemy2.cpp" />
+    <ClCompile Include="Boss.cpp" />
+    <ClCompile Include="BulletCount.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <MeshContentTask Include="Assets\modelData\Title.fbx">
+      <Filter>Assets\modeData</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\Bullet.fbx" />
+    <MeshContentTask Include="Assets\modelData\coin.fbx" />
+    <MeshContentTask Include="Assets\modelData\EnemyBullet.fbx" />
+    <MeshContentTask Include="Assets\modelData\unityChan.fbx" />
+    <MeshContentTask Include="Assets\modelData\yuka.fbx" />
+    <MeshContentTask Include="Assets\modelData\Title.fbx" />
+    <MeshContentTask Include="Assets\modelData\stage.fbx" />
     <MeshContentTask Include="Assets\modelData\Bullet.fbx">
       <Filter>Assets\modeData</Filter>
     </MeshContentTask>
     <MeshContentTask Include="Assets\modelData\coin.fbx">
       <Filter>Assets\modeData</Filter>
     </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\Enemy.fbx">
+      <Filter>Assets\modeData</Filter>
+    </MeshContentTask>
     <MeshContentTask Include="Assets\modelData\EnemyBullet.fbx">
+      <Filter>Assets\modeData</Filter>
+    </MeshContentTask>
+    <MeshContentTask Include="Assets\modelData\stage.fbx">
       <Filter>Assets\modeData</Filter>
     </MeshContentTask>
     <MeshContentTask Include="Assets\modelData\unityChan.fbx">
@@ -74,10 +93,10 @@
     <MeshContentTask Include="Assets\modelData\yuka.fbx">
       <Filter>Assets\modeData</Filter>
     </MeshContentTask>
-    <MeshContentTask Include="Assets\modelData\Title.fbx">
+    <MeshContentTask Include="Assets\modelData\Enemy2.fbx">
       <Filter>Assets\modeData</Filter>
     </MeshContentTask>
-    <MeshContentTask Include="Assets\modelData\stage.fbx">
+    <MeshContentTask Include="Assets\modelData\Player.fbx">
       <Filter>Assets\modeData</Filter>
     </MeshContentTask>
     <MeshContentTask Include="Assets\modelData\Bullet.fbx" />
@@ -88,12 +107,6 @@
     <MeshContentTask Include="Assets\modelData\Title.fbx" />
     <MeshContentTask Include="Assets\modelData\stage.fbx" />
     <MeshContentTask Include="Assets\modelData\Enemy.fbx" />
-    <MeshContentTask Include="Assets\modelData\GameOver.fbx">
-      <Filter>Assets\modeData</Filter>
-    </MeshContentTask>
-    <MeshContentTask Include="Assets\modelData\Overmoji.fbx">
-      <Filter>Assets\modeData</Filter>
-    </MeshContentTask>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bullet.h" />
@@ -118,6 +131,9 @@
     <ClInclude Include="Stage.h" />
     <ClInclude Include="Sound.h" />
     <ClInclude Include="Title.h" />
+    <ClInclude Include="Enemy2.h" />
+    <ClInclude Include="Boss.h" />
+    <ClInclude Include="BulletCount.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sound.h" />
