@@ -12,16 +12,14 @@ public:
 	void Addcount(int coin) {
 		coinCount += coin;
 	}
-	//void Setcount(int coin)
-	//{
-	//	coinCount = coin;
-	//}
-	//bool GetCoin()
-	//{
-	//	return coinCount;
-	//}
+	int GetCoin()
+	{
+		return coinCount;
+	}
+
 private:
 	int coinCount = 0;
+	int c = 1;
 	//コインカウント2D
 	prefab::CFontRender* m_fontRender = nullptr;
 };

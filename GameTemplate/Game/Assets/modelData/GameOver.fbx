@@ -10,11 +10,11 @@ FBXHeaderExtension:  {
 		Version: 1000
 		Year: 2019
 		Month: 7
-		Day: 12
+		Day: 11
 		Hour: 15
-		Minute: 46
-		Second: 34
-		Millisecond: 637
+		Minute: 1
+		Second: 11
+		Millisecond: 26
 	}
 	Creator: "FBX SDK/FBX Plugins version 2017.0.1"
 	SceneInfo: "SceneInfo::GlobalInfo", "UserData" {
@@ -30,19 +30,19 @@ FBXHeaderExtension:  {
 			Comment: ""
 		}
 		Properties70:  {
-			P: "DocumentUrl", "KString", "Url", "", "C:\Users\GC1827\Desktop\平野帰れ\Geme\GameTemplate\Game\Assets\modelData\Title.fbx"
-			P: "SrcDocumentUrl", "KString", "Url", "", "C:\Users\GC1827\Desktop\平野帰れ\Geme\GameTemplate\Game\Assets\modelData\Title.fbx"
+			P: "DocumentUrl", "KString", "Url", "", "C:\Users\GC1827\Desktop\平野帰れ\Geme\GameTemplate\Game\Assets\modelData\GameOver.fbx"
+			P: "SrcDocumentUrl", "KString", "Url", "", "C:\Users\GC1827\Desktop\平野帰れ\Geme\GameTemplate\Game\Assets\modelData\GameOver.fbx"
 			P: "Original", "Compound", "", ""
 			P: "Original|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "Original|ApplicationName", "KString", "", "", "3ds Max"
 			P: "Original|ApplicationVersion", "KString", "", "", "2017"
-			P: "Original|DateTime_GMT", "DateTime", "", "", "12/07/2019 06:46:34.635"
-			P: "Original|FileName", "KString", "", "", "C:\Users\GC1827\Desktop\平野帰れ\Geme\GameTemplate\Game\Assets\modelData\Title.fbx"
+			P: "Original|DateTime_GMT", "DateTime", "", "", "11/07/2019 06:01:11.025"
+			P: "Original|FileName", "KString", "", "", "C:\Users\GC1827\Desktop\平野帰れ\Geme\GameTemplate\Game\Assets\modelData\GameOver.fbx"
 			P: "LastSaved", "Compound", "", ""
 			P: "LastSaved|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "LastSaved|ApplicationName", "KString", "", "", "3ds Max"
 			P: "LastSaved|ApplicationVersion", "KString", "", "", "2017"
-			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "12/07/2019 06:46:34.635"
+			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "11/07/2019 06:01:11.025"
 			P: "Original|ApplicationActiveProject", "KString", "", "", "C:\Users\GC1827\Documents\3dsMax"
 		}
 	}
@@ -78,7 +78,7 @@ GlobalSettings:  {
 
 Documents:  {
 	Count: 1
-	Document: 1866298096, "", "Scene" {
+	Document: 1105836160, "", "Scene" {
 		Properties70:  {
 			P: "SourceObject", "object", "", ""
 			P: "ActiveAnimStackName", "KString", "", "", ""
@@ -301,12 +301,12 @@ Definitions:  {
 ;------------------------------------------------------------------
 
 Objects:  {
-	Geometry: 1846931776, "Geometry::", "Mesh" {
+	Geometry: 1909607280, "Geometry::", "Mesh" {
 		Properties70:  {
-			P: "Color", "ColorRGB", "Color", "",0.341176470588235,0.882352941176471,0.776470588235294
+			P: "Color", "ColorRGB", "Color", "",0.650980392156863,0.898039215686275,0.898039215686275
 		}
 		Vertices: *24 {
-			a: -69.2443923950195,-67.6488952636719,0,69.2443923950195,-67.6488952636719,0,-69.2443923950195,67.6488952636719,0,69.2443923950195,67.6488952636719,0,-69.2443923950195,-67.6488952636719,3.82918548583984,69.2443923950195,-67.6488952636719,3.82918548583984,-69.2443923950195,67.6488952636719,3.82918548583984,69.2443923950195,67.6488952636719,3.82918548583984
+			a: -90.1467514038086,-67.0859527587891,0,90.1467514038086,-67.0859527587891,0,-90.1467514038086,67.0859527587891,0,90.1467514038086,67.0859527587891,0,-90.1467514038086,-67.0859527587891,3.35430145263672,90.1467514038086,-67.0859527587891,3.35430145263672,-90.1467514038086,67.0859527587891,3.35430145263672,90.1467514038086,67.0859527587891,3.35430145263672
 		} 
 		PolygonVertexIndex: *36 {
 			a: 1,0,-4,0,2,-4,7,6,-5,7,4,-6,5,4,-1,5,0,-2,7,5,-2,7,1,-4,6,7,-4,6,3,-3,4,6,-3,4,2,-1
@@ -397,19 +397,19 @@ Objects:  {
 			}
 		}
 	}
-	Model: 1851484400, "Model::Box001", "Mesh" {
+	Model: 1874049504, "Model::Box001", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
 			P: "DefaultAttributeIndex", "int", "Integer", "",0
-			P: "Lcl Translation", "Lcl Translation", "", "A",-1.13941478729248,0.978824615478516,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-0.391456723213196,0.052372932434082,0
 			P: "MaxHandle", "int", "Integer", "UH",3
 		}
 		Shading: T
 		Culling: "CullingOff"
 	}
-	Material: 1582881376, "Material::Material #27", "" {
+	Material: 1909568176, "Material::Material #27", "" {
 		Version: 102
 		ShadingModel: "phong"
 		MultiLayer: 0
@@ -431,16 +431,16 @@ Objects:  {
 			P: "Reflectivity", "double", "Number", "",0
 		}
 	}
-	Video: 1847106848, "Video::マップ #3", "Clip" {
+	Video: 1906081008, "Video::マップ #3", "Clip" {
 		Type: "Clip"
 		Properties70:  {
-			P: "Path", "KString", "XRefUrl", "", "C:\Users\GC1827\Desktop\平野帰れ\Geme\GameTemplate\Game\Assets\sprite\Title.png"
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\GC1827\Desktop\平野帰れ\Geme\GameTemplate\Game\Assets\sprite\GameOver.jpg"
 		}
 		UseMipMap: 0
-		Filename: "C:\Users\GC1827\Desktop\平野帰れ\Geme\GameTemplate\Game\Assets\sprite\Title.png"
-		RelativeFilename: "..\sprite\Title.png"
+		Filename: "C:\Users\GC1827\Desktop\平野帰れ\Geme\GameTemplate\Game\Assets\sprite\GameOver.jpg"
+		RelativeFilename: "..\sprite\GameOver.jpg"
 	}
-	Texture: 1582885696, "Texture::マップ #3", "" {
+	Texture: 1909562896, "Texture::マップ #3", "" {
 		Type: "TextureVideoClip"
 		Version: 202
 		TextureName: "Texture::マップ #3"
@@ -449,20 +449,20 @@ Objects:  {
 			P: "UseMaterial", "bool", "", "",1
 		}
 		Media: "Video::マップ #3"
-		FileName: "C:\Users\GC1827\Desktop\平野帰れ\Geme\GameTemplate\Game\Assets\sprite\Title.png"
-		RelativeFilename: "..\sprite\Title.png"
+		FileName: "C:\Users\GC1827\Desktop\平野帰れ\Geme\GameTemplate\Game\Assets\sprite\GameOver.jpg"
+		RelativeFilename: "..\sprite\GameOver.jpg"
 		ModelUVTranslation: 0,0
 		ModelUVScaling: 1,1
 		Texture_Alpha_Source: "Alpha_Black"
 		Cropping: 0,0,0,0
 	}
-	AnimationStack: 1888833040, "AnimStack::Take 001", "" {
+	AnimationStack: 1875824304, "AnimStack::Take 001", "" {
 		Properties70:  {
 			P: "LocalStop", "KTime", "Time", "",153953860000
 			P: "ReferenceStop", "KTime", "Time", "",153953860000
 		}
 	}
-	AnimationLayer: 1437327216, "AnimLayer::BaseLayer", "" {
+	AnimationLayer: 1875012080, "AnimLayer::BaseLayer", "" {
 	}
 }
 
@@ -472,22 +472,22 @@ Objects:  {
 Connections:  {
 	
 	;Model::Box001, Model::RootNode
-	C: "OO",1851484400,0
+	C: "OO",1874049504,0
 	
 	;AnimLayer::BaseLayer, AnimStack::Take 001
-	C: "OO",1437327216,1888833040
+	C: "OO",1875012080,1875824304
 	
 	;Material::Material #27, Model::Box001
-	C: "OO",1582881376,1851484400
+	C: "OO",1909568176,1874049504
 	
 	;Geometry::, Model::Box001
-	C: "OO",1846931776,1851484400
+	C: "OO",1909607280,1874049504
 	
 	;Texture::マップ #3, Material::Material #27
-	C: "OP",1582885696,1582881376, "DiffuseColor"
+	C: "OP",1909562896,1909568176, "DiffuseColor"
 	
 	;Video::マップ #3, Texture::マップ #3
-	C: "OO",1847106848,1582885696
+	C: "OO",1906081008,1909562896
 }
 ;Takes section
 ;----------------------------------------------------

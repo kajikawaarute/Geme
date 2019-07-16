@@ -1,4 +1,5 @@
 #pragma once
+class Player;
 class GameOver : public IGameObject
 {
 public:
@@ -7,6 +8,9 @@ public:
 	bool Start();
 	void Update();
 
-	prefab::CSpriteRender*m_spriteRender = nullptr;
+private:
+	CVector3 m_position = CVector3::Zero;
+	float m_timer = 0.0f;
+	prefab::CSpriteRender*m_sprite = nullptr;
 };
 

@@ -12,21 +12,22 @@
 #include "CoinCount.h"
 #include "Stage.h"
 #include "BulletCount.h"
+#include "EnemyBullet.h"
+#include "GameClear.h"
 
 CVector3 cameraPos = { 0.0f, 70.0f, 200.0f };
 CVector3 cameraTarget;
 
 Game::Game()
 {
+
 	NewGO<Player>(0, "player");
 	NewGO<GameCamera>(0, "GC");
 	NewGO<PlayerHP>(0, "ph");
 	NewGO<EnemyCreate>(0, "eneCreate");
-	NewGO<Coin>(0, "Coin");
 	NewGO<Coin2D>(0, "Coin2D");
 	NewGO<CoinCount>(0, "CoinCount");
 	NewGO<Timer>(0, "Timer");
-	//NewGO<Coin>(0, "Coin");
 	NewGO<Stage>(0, "stage");
 	NewGO<BulletCount>(0, "blCount");
 	m_Light = NewGO<prefab::CDirectionLight>(0);
@@ -47,8 +48,8 @@ Game::~Game()
 	DeleteGO(ph);
 	EnemyCreate* eneCreate = FindGO<EnemyCreate>("eneCreate");
 	DeleteGO(eneCreate);
-	Stage* sg = FindGO<Stage>("stage");
-	DeleteGO(sg);
+	/*Stage* sg = FindGO<Stage>("stage");
+	DeleteGO(sg);*/
 	Coin2D*coin2D = FindGO<Coin2D>("Coin2D");
 	DeleteGO(coin2D);
 	Timer*m_timer = FindGO<Timer>("Timer");
@@ -57,7 +58,9 @@ Game::~Game()
 	DeleteGO(coinCount);
 	BulletCount* bc = FindGO<BulletCount>("blCount");
 	DeleteGO(bc);
-
+	Coin* coin = FindGO<Coin>("Coin");
+	DeleteGOs("Coin");
+	
 }
 bool Game::Start()
 {
@@ -74,14 +77,26 @@ void Game::Update()
 		m_coin =NewGO<Coin>(0, "Coin");
 		m_timer = 0;
 	}
-	float deltaTime = GameTime().GetFrameDeltaTime();
+
+	if (is_GameClear == true) {
+		NewGO<GameClear>(0, "GameClear");
+		DeleteGO(this);
+	}
+
+	if (is_GameOver == true) {
+		NewGO<GameOver>(0, "GameOver");
+		DeleteGO(this);
+	}
+
+
+	/*float deltaTime = GameTime().GetFrameDeltaTime();
 	m_restTimer -= deltaTime;
 	if (m_restTimer < 0.0f || damageCount == 3) {
 		m_Timer += GameTime().GetFrameDeltaTime();
 		if (m_Timer > 2) {
 			m_restTimer = 0.0f;
 			DeleteGO(this);
-			NewGO<GameOver>(0, "GameOver");
+			NewGO<GameClear>(0, "Game");
 		}
-	}
+	}*/
 }

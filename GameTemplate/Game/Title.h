@@ -13,6 +13,7 @@ public:
 	bool Start();
 	void Update();
 
+
 private:
 
 	Fade* fade = nullptr;
@@ -20,6 +21,11 @@ private:
 	Sound* sound = nullptr;
 
 	float m_timer = 0.0f;
+	float m_timer2 = 0.0f;
+	
+	float AngleY = 0.0f;
+
+	float color = 0.1f;
 
 	CVector3 m_position = CVector3::Zero;
 	CVector3 m_position1 = CVector3::Zero;
@@ -34,12 +40,21 @@ private:
 	prefab::CSoundSource* m_Sound = nullptr;
 	prefab::CSoundSource* m_Sound1 = nullptr;
 
-	//Unityちゃん
+	//playerモデル
 	prefab::CSkinModelRender* CSkinmodel = nullptr;
 	CQuaternion m_kaiten = CQuaternion::Identity;
 
 	//タイトル
 	prefab::CSkinModelRender* CSkinmodel1 = nullptr;
 	CQuaternion m_kaiten1 = CQuaternion::Identity;
+
+	CQuaternion m_kaiten2 = CQuaternion::Identity;
+	
+	//ライトの明るさ
+	CVector3 light = { 0.8f,0.8f,0.12f };
+	
+	//文字のライト
+	CVector4 m_light = { 1.0f,1.0f,1.0f,color };
+
 };
 

@@ -62,7 +62,6 @@ void Player::Move()
 	qRot.SetRotation({ 1.0f, 0.0f, 0.0f }, cameraRight);
 	m_rotation = qRot;
 
-	
 }
 
 void Player::Death()

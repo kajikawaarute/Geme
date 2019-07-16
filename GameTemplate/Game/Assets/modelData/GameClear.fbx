@@ -10,11 +10,11 @@ FBXHeaderExtension:  {
 		Version: 1000
 		Year: 2019
 		Month: 7
-		Day: 12
-		Hour: 15
-		Minute: 46
-		Second: 34
-		Millisecond: 637
+		Day: 11
+		Hour: 14
+		Minute: 57
+		Second: 24
+		Millisecond: 767
 	}
 	Creator: "FBX SDK/FBX Plugins version 2017.0.1"
 	SceneInfo: "SceneInfo::GlobalInfo", "UserData" {
@@ -30,19 +30,19 @@ FBXHeaderExtension:  {
 			Comment: ""
 		}
 		Properties70:  {
-			P: "DocumentUrl", "KString", "Url", "", "C:\Users\GC1827\Desktop\平野帰れ\Geme\GameTemplate\Game\Assets\modelData\Title.fbx"
-			P: "SrcDocumentUrl", "KString", "Url", "", "C:\Users\GC1827\Desktop\平野帰れ\Geme\GameTemplate\Game\Assets\modelData\Title.fbx"
+			P: "DocumentUrl", "KString", "Url", "", "C:\Users\GC1827\Desktop\平野帰れ\Geme\GameTemplate\Game\Assets\modelData\GameClear.fbx"
+			P: "SrcDocumentUrl", "KString", "Url", "", "C:\Users\GC1827\Desktop\平野帰れ\Geme\GameTemplate\Game\Assets\modelData\GameClear.fbx"
 			P: "Original", "Compound", "", ""
 			P: "Original|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "Original|ApplicationName", "KString", "", "", "3ds Max"
 			P: "Original|ApplicationVersion", "KString", "", "", "2017"
-			P: "Original|DateTime_GMT", "DateTime", "", "", "12/07/2019 06:46:34.635"
-			P: "Original|FileName", "KString", "", "", "C:\Users\GC1827\Desktop\平野帰れ\Geme\GameTemplate\Game\Assets\modelData\Title.fbx"
+			P: "Original|DateTime_GMT", "DateTime", "", "", "11/07/2019 05:57:24.745"
+			P: "Original|FileName", "KString", "", "", "C:\Users\GC1827\Desktop\平野帰れ\Geme\GameTemplate\Game\Assets\modelData\GameClear.fbx"
 			P: "LastSaved", "Compound", "", ""
 			P: "LastSaved|ApplicationVendor", "KString", "", "", "Autodesk"
 			P: "LastSaved|ApplicationName", "KString", "", "", "3ds Max"
 			P: "LastSaved|ApplicationVersion", "KString", "", "", "2017"
-			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "12/07/2019 06:46:34.635"
+			P: "LastSaved|DateTime_GMT", "DateTime", "", "", "11/07/2019 05:57:24.745"
 			P: "Original|ApplicationActiveProject", "KString", "", "", "C:\Users\GC1827\Documents\3dsMax"
 		}
 	}
@@ -78,7 +78,7 @@ GlobalSettings:  {
 
 Documents:  {
 	Count: 1
-	Document: 1866298096, "", "Scene" {
+	Document: 1435875440, "", "Scene" {
 		Properties70:  {
 			P: "SourceObject", "object", "", ""
 			P: "ActiveAnimStackName", "KString", "", "", ""
@@ -301,18 +301,18 @@ Definitions:  {
 ;------------------------------------------------------------------
 
 Objects:  {
-	Geometry: 1846931776, "Geometry::", "Mesh" {
+	Geometry: 1906417952, "Geometry::", "Mesh" {
 		Properties70:  {
-			P: "Color", "ColorRGB", "Color", "",0.341176470588235,0.882352941176471,0.776470588235294
+			P: "Color", "ColorRGB", "Color", "",0.650980392156863,0.898039215686275,0.898039215686275
 		}
-		Vertices: *24 {
-			a: -69.2443923950195,-67.6488952636719,0,69.2443923950195,-67.6488952636719,0,-69.2443923950195,67.6488952636719,0,69.2443923950195,67.6488952636719,0,-69.2443923950195,-67.6488952636719,3.82918548583984,69.2443923950195,-67.6488952636719,3.82918548583984,-69.2443923950195,67.6488952636719,3.82918548583984,69.2443923950195,67.6488952636719,3.82918548583984
+		Vertices: *36 {
+			a: -90.1467514038086,-67.0859527587891,0,90.1467514038086,-67.0859527587891,0,-90.1467514038086,80.623046875,0,90.1467514038086,80.623046875,0,-90.1467514038086,-67.0859527587891,3.35430145263672,90.1467514038086,-67.0859527587891,3.35430145263672,-90.1467514038086,80.623046875,3.35430145263672,90.1467514038086,80.623046875,3.35430145263672,90.1467514038086,223.065948486328,0,-90.1467514038086,223.065948486328,0,-90.1467514038086,223.065948486328,3.35430145263672,90.1467514038086,223.065948486328,3.35430145263672
 		} 
-		PolygonVertexIndex: *36 {
-			a: 1,0,-4,0,2,-4,7,6,-5,7,4,-6,5,4,-1,5,0,-2,7,5,-2,7,1,-4,6,7,-4,6,3,-3,4,6,-3,4,2,-1
+		PolygonVertexIndex: *60 {
+			a: 1,0,-4,0,2,-4,7,6,-5,7,4,-6,5,4,-1,5,0,-2,7,5,-2,7,1,-4,10,11,-9,10,8,-10,4,6,-3,4,2,-1,2,9,-4,3,9,-9,10,2,-7,2,10,-10,11,10,-7,11,6,-8,3,8,-8,11,7,-9
 		} 
-		Edges: *18 {
-			a: 0,1,2,3,4,6,7,8,10,11,13,14,17,20,23,26,29,32
+		Edges: *30 {
+			a: 0,1,2,3,4,6,7,8,10,11,13,14,17,20,23,24,25,26,28,29,31,32,36,37,41,42,44,50,53,55
 		} 
 		GeometryVersion: 124
 		LayerElementNormal: 0 {
@@ -320,11 +320,11 @@ Objects:  {
 			Name: ""
 			MappingInformationType: "ByPolygonVertex"
 			ReferenceInformationType: "Direct"
-			Normals: *108 {
-				a: 0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0
+			Normals: *180 {
+				a: 0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0
 			} 
-			NormalsW: *36 {
-				a: 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+			NormalsW: *60 {
+				a: 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 			} 
 		}
 		LayerElementBinormal: 0 {
@@ -332,11 +332,11 @@ Objects:  {
 			Name: "UVChannel_1"
 			MappingInformationType: "ByPolygonVertex"
 			ReferenceInformationType: "Direct"
-			Binormals: *108 {
-				a: 0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,-0,0,1,-0,0,1,-0,0,1,-0,0,1,-0,0,1,-0,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,-0,0,1,-0,0,1,-0,0,1,-0,0,1,-0,0,1,-0,0,1,0,-0,1,0,-0,1,0,-0,1,0,-0,1,0,-0,1,0,-0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1
+			Binormals: *180 {
+				a: 0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,-0,0,1,-0,0,1,-0,0,1,-0,0,1,-0,0,1,-0,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,-0,0,1,-0,0,1,-0,0,1,-0,0,1,-0,0,1,-0,0,1,0,-0,1,0,-0,1,0,-0,1,0,-0,1,0,-0,1,0,-0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0,0,1,-0,0,1,-0,0,1,-0,0,1,-0,0,1,-0,0,1
 			} 
-			BinormalsW: *36 {
-				a: 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+			BinormalsW: *60 {
+				a: 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 			} 
 
 		}
@@ -345,11 +345,11 @@ Objects:  {
 			Name: "UVChannel_1"
 			MappingInformationType: "ByPolygonVertex"
 			ReferenceInformationType: "Direct"
-			Tangents: *108 {
-				a: -1,-0,0,-1,-0,0,-1,-0,0,-1,-0,0,-1,-0,0,-1,-0,0,1,-0,-0,1,-0,-0,1,-0,-0,1,-0,-0,1,-0,-0,1,-0,-0,1,0,-0,1,0,-0,1,0,-0,1,0,-0,1,0,-0,1,0,-0,-0,1,-0,-0,1,-0,-0,1,-0,-0,1,-0,-0,1,-0,-0,1,-0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,0,-1,-0,0,-1,-0,0,-1,-0,0,-1,-0,0,-1,-0,0,-1,-0
+			Tangents: *180 {
+				a: -1,-0,0,-1,-0,0,-1,-0,0,-1,-0,0,-1,-0,0,-1,-0,0,1,-0,-0,1,-0,-0,1,-0,-0,1,-0,-0,1,-0,-0,1,-0,-0,1,0,-0,1,0,-0,1,0,-0,1,0,-0,1,0,-0,1,0,-0,-0,1,-0,-0,1,-0,-0,1,-0,-0,1,-0,-0,1,-0,-0,1,-0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,-1,0,0,0,-1,-0,0,-1,-0,0,-1,-0,0,-1,-0,0,-1,-0,0,-1,-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,-0,0,-1,-0,0,-1,-0,0,-1,-0,0,-1,-0,0,-1,-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-0,1,-0,-0,1,-0,-0,1,-0,-0,1,-0,-0,1,-0,-0,1,-0
 			} 
-			TangentsW: *36 {
-				a: 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
+			TangentsW: *60 {
+				a: 1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1
 			} 
 		}
 		LayerElementUV: 0 {
@@ -357,11 +357,11 @@ Objects:  {
 			Name: "UVChannel_1"
 			MappingInformationType: "ByPolygonVertex"
 			ReferenceInformationType: "IndexToDirect"
-			UV: *48 {
-				a: 1,0,0,0,1,1,0,1,0,0,1,0,0,1,1,1,0,0,1,0,0,1,1,1,0,0,1,0,0,1,1,1,0,0,1,0,0,1,1,1,0,0,1,0,0,1,1,1
+			UV: *56 {
+				a: 1,0,0,0,1,1,0,1,0,0,1,0,0,1,1,1,0,0,1,0,0,1,1,1,0,0,1,0,0,1,1,1,0,0,1,0,0,1,1,1,0,0,1,0,0,1,1,1,0,0,1,0,1,1,0,1
 			} 
-			UVIndex: *36 {
-				a: 1,0,3,0,2,3,7,6,4,7,4,5,11,10,8,11,8,9,15,14,12,15,12,13,19,18,16,19,16,17,23,22,20,23,20,21
+			UVIndex: *60 {
+				a: 1,0,3,0,2,3,7,6,4,7,4,5,11,10,8,11,8,9,15,14,12,15,12,13,26,27,24,26,24,25,23,22,20,23,20,21,17,25,16,16,25,24,26,17,19,17,26,25,27,26,19,27,19,18,16,24,18,27,18,24
 			} 
 		}
 		LayerElementMaterial: 0 {
@@ -397,19 +397,20 @@ Objects:  {
 			}
 		}
 	}
-	Model: 1851484400, "Model::Box001", "Mesh" {
+	Model: 1902238576, "Model::Box001", "Mesh" {
 		Version: 232
 		Properties70:  {
 			P: "InheritType", "enum", "", "",1
 			P: "ScalingMax", "Vector3D", "Vector", "",0,0,0
 			P: "DefaultAttributeIndex", "int", "Integer", "",0
-			P: "Lcl Translation", "Lcl Translation", "", "A",-1.13941478729248,0.978824615478516,0
+			P: "Lcl Translation", "Lcl Translation", "", "A",-0.391456723213196,-30.0006351470947,0
+			P: "Lcl Scaling", "Lcl Scaling", "", "A",1,0.373239547014236,1
 			P: "MaxHandle", "int", "Integer", "UH",3
 		}
 		Shading: T
 		Culling: "CullingOff"
 	}
-	Material: 1582881376, "Material::Material #27", "" {
+	Material: 1593173152, "Material::Material #25", "" {
 		Version: 102
 		ShadingModel: "phong"
 		MultiLayer: 0
@@ -431,38 +432,38 @@ Objects:  {
 			P: "Reflectivity", "double", "Number", "",0
 		}
 	}
-	Video: 1847106848, "Video::マップ #3", "Clip" {
+	Video: 1909533232, "Video::マップ #1", "Clip" {
 		Type: "Clip"
 		Properties70:  {
-			P: "Path", "KString", "XRefUrl", "", "C:\Users\GC1827\Desktop\平野帰れ\Geme\GameTemplate\Game\Assets\sprite\Title.png"
+			P: "Path", "KString", "XRefUrl", "", "C:\Users\GC1827\Desktop\平野帰れ\Geme\GameTemplate\Game\Assets\sprite\over.jpeg"
 		}
 		UseMipMap: 0
-		Filename: "C:\Users\GC1827\Desktop\平野帰れ\Geme\GameTemplate\Game\Assets\sprite\Title.png"
-		RelativeFilename: "..\sprite\Title.png"
+		Filename: "C:\Users\GC1827\Desktop\平野帰れ\Geme\GameTemplate\Game\Assets\sprite\over.jpeg"
+		RelativeFilename: "..\sprite\over.jpeg"
 	}
-	Texture: 1582885696, "Texture::マップ #3", "" {
+	Texture: 1593173632, "Texture::マップ #1", "" {
 		Type: "TextureVideoClip"
 		Version: 202
-		TextureName: "Texture::マップ #3"
+		TextureName: "Texture::マップ #1"
 		Properties70:  {
 			P: "UVSet", "KString", "", "", "UVChannel_1"
 			P: "UseMaterial", "bool", "", "",1
 		}
-		Media: "Video::マップ #3"
-		FileName: "C:\Users\GC1827\Desktop\平野帰れ\Geme\GameTemplate\Game\Assets\sprite\Title.png"
-		RelativeFilename: "..\sprite\Title.png"
+		Media: "Video::マップ #1"
+		FileName: "C:\Users\GC1827\Desktop\平野帰れ\Geme\GameTemplate\Game\Assets\sprite\over.jpeg"
+		RelativeFilename: "..\sprite\over.jpeg"
 		ModelUVTranslation: 0,0
 		ModelUVScaling: 1,1
 		Texture_Alpha_Source: "Alpha_Black"
 		Cropping: 0,0,0,0
 	}
-	AnimationStack: 1888833040, "AnimStack::Take 001", "" {
+	AnimationStack: 1907824672, "AnimStack::Take 001", "" {
 		Properties70:  {
 			P: "LocalStop", "KTime", "Time", "",153953860000
 			P: "ReferenceStop", "KTime", "Time", "",153953860000
 		}
 	}
-	AnimationLayer: 1437327216, "AnimLayer::BaseLayer", "" {
+	AnimationLayer: 1905131552, "AnimLayer::BaseLayer", "" {
 	}
 }
 
@@ -472,22 +473,22 @@ Objects:  {
 Connections:  {
 	
 	;Model::Box001, Model::RootNode
-	C: "OO",1851484400,0
+	C: "OO",1902238576,0
 	
 	;AnimLayer::BaseLayer, AnimStack::Take 001
-	C: "OO",1437327216,1888833040
+	C: "OO",1905131552,1907824672
 	
-	;Material::Material #27, Model::Box001
-	C: "OO",1582881376,1851484400
+	;Material::Material #25, Model::Box001
+	C: "OO",1593173152,1902238576
 	
 	;Geometry::, Model::Box001
-	C: "OO",1846931776,1851484400
+	C: "OO",1906417952,1902238576
 	
-	;Texture::マップ #3, Material::Material #27
-	C: "OP",1582885696,1582881376, "DiffuseColor"
+	;Texture::マップ #1, Material::Material #25
+	C: "OP",1593173632,1593173152, "DiffuseColor"
 	
-	;Video::マップ #3, Texture::マップ #3
-	C: "OO",1847106848,1582885696
+	;Video::マップ #1, Texture::マップ #1
+	C: "OO",1909533232,1593173632
 }
 ;Takes section
 ;----------------------------------------------------

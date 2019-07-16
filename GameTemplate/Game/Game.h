@@ -4,6 +4,8 @@
 #include "tkEngine/physics/tkPhysicsGhostObject.h"
 #include "tkEngine/character/tkCharacterController.h"
 class Coin;
+class CoinCount;
+
 class Game : public IGameObject
 
 {
@@ -13,18 +15,60 @@ public:
 	bool Start();
 	void Update();
 
+	bool GetisGameOver()
+	{
+		return is_GameOver;
+	}
+
+	void SetGameOver(bool flag)
+	{
+		is_GameOver = flag;
+	}
+
+	bool GetisGameClear()
+	{
+		return is_GameClear;
+	}
+
+	void SetGameClear(bool flag)
+	{
+		is_GameClear = flag;
+	}
+
+	int GetdamageCount()
+	{
+		return damageCount;
+	}
+
+	void SetdamageCount(int num)
+	{
+		damageCount = num;
+	}
+	void Add_damageCount()
+	{
+		damageCount++;
+	}
+	
 	int coinCount = 0; //ボスが出てくるためのコインカウント
-	int damageCount = 0;	//プレイヤーのダメージカウント
+	
 	float m_Timer = 0;
 
-
-	float m_timer = 0;
-	Coin*m_coin = nullptr;
-	float m_restTimer = 60.0f;
-	prefab::CDirectionLight* m_Light = nullptr;
+	float m_restTimer = 10.0f;
 	float GetRestTime() const
 	{
 		return m_restTimer;
 	}
+
+private:
+
+	int damageCount = 0;	//プレイヤーのダメージカウント
+	bool is_GameOver = false;
+	bool is_GameClear = false;
+
+	float m_timer = 0;
+	Coin*m_coin = nullptr;
+	
+	prefab::CDirectionLight* m_Light = nullptr;
+
 };
 
