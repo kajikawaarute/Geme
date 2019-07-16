@@ -57,10 +57,10 @@ void Boss::Death()
 		return true;
 		});
 
-	Game* ga = FindGO<Game>("Game");
+	/*Game* ga = FindGO<Game>("Game");
 	if (ga->m_restTimer < 0.1) {
 		DeleteGO(this);
-	}
+	}*/
 }
 
 

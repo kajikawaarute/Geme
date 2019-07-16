@@ -67,7 +67,7 @@ void Player::Move()
 void Player::Death()
 {
 	ga = FindGO<Game>("Game");
-	if (ga->damageCount == 3) {
+	if (ga->GetdamageCount() == 3) {
 		m_timer += GameTime().GetFrameDeltaTime();
 		//一定時間エフェクトの表示
 		if (m_timer < 1.0f) {
