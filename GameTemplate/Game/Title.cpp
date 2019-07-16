@@ -23,42 +23,29 @@ Title::~Title()
 bool Title::Start()
 {
 	MainCamera().SetTarget(m_position3);
-	MainCamera().SetPosition({0.0f,0.0f,-400.0f});
+	MainCamera().SetPosition({0.0f,0.0f,-300.0f});
 	MainCamera().Update();
 
 	//postEffect::Tonemap().SetLuminance(0.60f);
-	//タイトル
-	/*m_spriteRender2 = NewGO<prefab::CSpriteRender>(0);
-	m_spriteRender2->Init(L"sprite/title.dds", 1280.0f, 720.0f);
-	m_spriteRender2->SetPosition(m_position2);*/
 
-	//文字
+	//タイトル文字
 	m_spriteRender = NewGO<prefab::CSpriteRender>(1);
 	m_spriteRender->Init(L"sprite/Game.dds", 1280.0f, 720.0f);
 	m_position.y = 340;
 	m_spriteRender->SetPosition(m_position);
 
-	//文字
+	//ボタン文字
 	m_spriteRender1 = NewGO<prefab::CSpriteRender>(1);
 	m_spriteRender1->Init(L"sprite/botanose.dds", 1280.0f, 999.0f);
 	m_position1.y = -300;
 	m_spriteRender1->SetPosition(m_position1);
 	m_spriteRender1->SetMulColor(m_light);
 
-	//アニメーション
-	/*m_animClips[enAnimationClip_idle].Load(L"animData/unityChan/idle.tka");
-	m_animClips[enAnimationClip_jump].Load(L"animData/unityChan/jump.tka");*/
-	/*m_animClips[enAnimationClip_idle].SetLoopFlag(false);
-	m_animClips[enAnimationClip_jump].SetLoopFlag(false);*/
-
-	m_animClips[enAnimationClip_run].Load(L"animData/unityChan/run.tka");
-	m_animClips[enAnimationClip_run].SetLoopFlag(true);
-
 	//Unityちゃん表示
 	CSkinmodel = NewGO<prefab::CSkinModelRender>(2);
-	CSkinmodel->Init(L"modelData/unityChan.cmo",m_animClips, enAnimationClip_Num);
-	m_position3.z = -200;
-	m_position3.y = -50;
+	CSkinmodel->Init(L"modelData/Player.cmo"/*,m_animClips, enAnimationClip_Num*/);
+	m_position3.z = -170;
+	m_position3.y = -60;
 
 	CSkinmodel->SetRotation(m_kaiten);
 	CSkinmodel->SetPosition(m_position3);
@@ -68,8 +55,8 @@ bool Title::Start()
 	//タイトル
 	CSkinmodel1 = NewGO<prefab::CSkinModelRender>(2);
 	CSkinmodel1->Init(L"modelData/Title.cmo");
-	m_position2.z = -100;
-	m_position2.y = 10;
+	m_position2.z = -65;
+	m_position2.y =-2;
 	m_position2.x= -10;
 
 	CQuaternion pAddRot;
@@ -77,7 +64,7 @@ bool Title::Start()
 	m_kaiten1 = pAddRot;
 	CSkinmodel1->SetRotation(m_kaiten1);
 	CSkinmodel1->SetPosition(m_position2);
-	CSkinmodel1->SetScale({ 2.7f,2.6f,2.0f });
+	CSkinmodel1->SetScale({ 4.5f,5.5f,2.0f });
 	//CSkinmodel1->SetEmissionColor(light);
 
 	//音楽
@@ -93,7 +80,7 @@ bool Title::Start()
 
 void Title::Update()
 {
-	CSkinmodel->PlayAnimation(enAnimationClip_run, 0.5f);
+	//CSkinmodel->PlayAnimation(enAnimationClip_run, 0.5f);
 	//CSkinmodel->SetPosition(m_position3);
 	//プレイヤーの回転処理
 	CQuaternion qAddRot;
@@ -108,19 +95,12 @@ void Title::Update()
 		m_spriteRender->SetPosition(m_position);
 	}
 
-	if (m_timer <= 3.0f) {
-
-		m_light={ 0.9f,0.9f,0.18f,0.18f };
-	}
-	if (m_timer > 3.0f)
+	m_timer2++;
+	if (m_timer2 <= 999) 
 	{
-		m_light = { 1.8f,1.8f,1.2f,1.2f };
+		color += 0.1;
 	}
-
-	if (m_timer == 4.0f) {
-		m_timer = 0.0f;
-	}
-
+	
 	m_spriteRender1->SetMulColor(m_light);
 
 	//ボタン押すとゲームに行く

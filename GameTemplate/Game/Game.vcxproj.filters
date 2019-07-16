@@ -22,9 +22,6 @@
     <ImageContentTask Include="Assets\sprite\heart3.png">
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
-    <ImageContentTask Include="Assets\sprite\title.png">
-      <Filter>Assets\sprite</Filter>
-    </ImageContentTask>
     <ImageContentTask Include="Assets\sprite\GameOver.png">
       <Filter>Assets\sprite</Filter>
     </ImageContentTask>
@@ -107,6 +104,8 @@
     <MeshContentTask Include="Assets\modelData\Title.fbx" />
     <MeshContentTask Include="Assets\modelData\stage.fbx" />
     <MeshContentTask Include="Assets\modelData\Enemy.fbx" />
+    <MeshContentTask Include="Assets\modelData\GameOver.fbx" />
+    <MeshContentTask Include="Assets\modelData\Overmoji.fbx" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bullet.h" />
@@ -200,5 +199,10 @@
     <Media Include="Assets\sound\coinGet.wav">
       <Filter>Assets\sound</Filter>
     </Media>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\sprite\Title.jpg">
+      <Filter>Assets\sprite</Filter>
+    </Image>
   </ItemGroup>
 </Project>

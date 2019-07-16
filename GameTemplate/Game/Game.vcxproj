@@ -1848,9 +1848,6 @@
     <ImageContentTask Include="Assets\sprite\dummy.png" />
   </ItemGroup>
   <ItemGroup>
-    <ImageContentTask Include="Assets\sprite\title.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ImageContentTask Include="Assets\sprite\botanose.png" />
     <ImageContentTask Include="Assets\sprite\Game.png" />
   </ItemGroup>
@@ -1890,6 +1887,9 @@
   </ItemGroup>
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\GameClear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\sprite\Title.jpg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

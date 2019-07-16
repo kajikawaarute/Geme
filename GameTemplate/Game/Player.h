@@ -10,6 +10,9 @@ public:
 	~Player();
 	bool Start();
 	void Update();
+
+
+
 	void Move();
 	void Death();
 	CVector3& GetPos()

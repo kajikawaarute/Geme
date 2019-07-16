@@ -53,17 +53,18 @@ void PlayerHP::Update()
 			if (m_sprite != nullptr) {
 				DeleteGO(m_sprite);
 				m_sprite = nullptr;
-				ga->damageCount++;
+				ga->Add_damageCount();
 			}
 			else if (m_sprite2 != nullptr) {
 				DeleteGO(m_sprite2);
 				m_sprite2 = nullptr;
-				ga->damageCount++;
+				ga->Add_damageCount();
 			}
 			else if (m_sprite3 != nullptr) {
 				DeleteGO(m_sprite3);
 				m_sprite3 = nullptr;
-				ga->damageCount++;
+				//ga->SetdamageCount(ga->GetdamageCount()+1);
+				ga->Add_damageCount();
 			}
 		}
 
@@ -77,17 +78,17 @@ void PlayerHP::Update()
 			if (m_sprite != nullptr) {
 				DeleteGO(m_sprite);
 				m_sprite = nullptr;
-				ga->damageCount++;
+				ga->Add_damageCount();
 			}
 			else if (m_sprite2 != nullptr) {
 				DeleteGO(m_sprite2);
 				m_sprite2 = nullptr;
-				ga->damageCount++;
+				ga->Add_damageCount();
 			}
 			else if (m_sprite3 != nullptr) {
 				DeleteGO(m_sprite3);
 				m_sprite3 = nullptr;
-				ga->damageCount++;
+				ga->Add_damageCount();
 			}
 		}
 		return true;
@@ -101,20 +102,20 @@ void PlayerHP::Update()
 				DeleteGO(m_sprite);
 				DeleteGO(enebl);
 				m_sprite = nullptr;
-				ga->damageCount++;
+				ga->Add_damageCount();
 				
 			}
 			else if (m_sprite2 != nullptr) {
 				DeleteGO(m_sprite2);
 				DeleteGO(enebl);
 				m_sprite2 = nullptr;
-				ga->damageCount++;
+				ga->Add_damageCount();
 			}
 			else if (m_sprite3 != nullptr) {
 				DeleteGO(m_sprite3);
 				DeleteGO(enebl);
 				m_sprite3 = nullptr;
-				ga->damageCount++;
+				ga->Add_damageCount();
 			}
 		}
 		return true;
@@ -130,5 +131,9 @@ void PlayerHP::Update()
 
 	if (m_sprite3 != nullptr) {
 		m_sprite3->SetPosition(m_position3);
+	}
+
+	if (ga->GetdamageCount() >=3) {
+		ga->SetGameOver(true);
 	}
 }

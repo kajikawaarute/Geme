@@ -59,9 +59,8 @@ Game::~Game()
 	DeleteGO(coinCount);
 	BulletCount* bc = FindGO<BulletCount>("blCount");
 	DeleteGO(bc);
-
 	Coin* coin = FindGO<Coin>("Coin");
-	DeleteGO(coin);
+	DeleteGOs("Coin");
 	
 }
 bool Game::Start()
@@ -80,14 +79,25 @@ void Game::Update()
 		m_timer = 0;
 	}
 
-	float deltaTime = GameTime().GetFrameDeltaTime();
+	if (is_GameClear == true) {
+		NewGO<GameClear>(0, "GameClear");
+		DeleteGO(this);
+	}
+
+	if (is_GameOver == true) {
+		NewGO<GameOver>(0, "GameOver");
+		DeleteGO(this);
+	}
+
+
+	/*float deltaTime = GameTime().GetFrameDeltaTime();
 	m_restTimer -= deltaTime;
 	if (m_restTimer < 0.0f || damageCount == 3) {
 		m_Timer += GameTime().GetFrameDeltaTime();
 		if (m_Timer > 2) {
 			m_restTimer = 0.0f;
 			DeleteGO(this);
-			NewGO<GameOver>(0, "GameOver");
+			NewGO<GameClear>(0, "Game");
 		}
-	}
+	}*/
 }

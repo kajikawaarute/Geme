@@ -42,10 +42,8 @@ bool GameOver::Start()
 	m_skinRender1->SetPosition(m_position1);*/
 	m_sprite = NewGO<prefab::CSpriteRender>(0);
 	m_sprite->Init(L"sprite/GameOver.dds", 1200.0f, 780.0f);
-	player = FindGO<Player>("player");
-	CVector3 position = player->GetPos();
-	position.y = 199;
-	m_sprite->SetPosition(position);
+	m_position.y = 199;
+	m_sprite->SetPosition(m_position);
 
 	return true;
 
@@ -55,6 +53,11 @@ bool GameOver::Start()
 void GameOver::Update()
 {
 
+	m_timer += GameTime().GetFrameDeltaTime();
+	if (m_timer <= 2.0f) {
+		m_position.y -= 2.0f;
+		m_sprite->SetPosition(m_position);
+	}
 	//if (Pad(0).IsPress(enButtonSelect) == true) 
 	//	DeleteGO(this);
 	//	NewGO<Title>(0);

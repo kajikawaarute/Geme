@@ -24,16 +24,18 @@ bool Timer::Start()
 void Timer::Update()
 {
 	m_Game = FindGO<Game>("Game");
-	int restTime = (int)m_Game->GetRestTime();
-	int min, sec;
+	//int restTime = (int)m_Game->GetRestTime();
+	
+	//deltaTime += GameTime().GetFrameDeltaTime();
+	timer -= GameTime().GetFrameDeltaTime();
 
-	float deltaTime = GameTime().GetFrameDeltaTime();
+	if (timer <= 0.0f) {
+		timer = 0.0f;
+		m_Game->SetGameClear(true);
+	}
 
-	min = restTime / 60;
-	sec = restTime % 60;
-
-	wchar_t text[256];
-	swprintf(text, L"Žc‚èŽžŠÔ%.d:%d", min, sec);
+	wchar_t text[100];
+	swprintf(text, L"Žc‚èŽžŠÔ %.0f", timer);
 	m_fontRender->SetText(text);
 }
 

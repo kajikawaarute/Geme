@@ -67,7 +67,7 @@ void Player::Move()
 void Player::Death()
 {
 	ga = FindGO<Game>("Game");
-	if (ga->damageCount == 3) {
+	if (ga->GetdamageCount() == 3) {
 		prefab::CEffect* ef = NewGO<prefab::CEffect>(0);
 		ef->Play(L"effect/playerdown.efk");
 		CVector3 efPos = m_position;

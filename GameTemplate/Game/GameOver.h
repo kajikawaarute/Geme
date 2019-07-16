@@ -10,7 +10,6 @@ public:
 
 private:
 
-
 	Player*player;
 	CVector3 m_position = CVector3::Zero;
 	CVector3 m_position1 = CVector3::Zero;
