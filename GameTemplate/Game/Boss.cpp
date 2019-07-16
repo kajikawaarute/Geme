@@ -2,6 +2,7 @@
 #include "Boss.h"
 #include "Player.h"
 #include "Bullet.h"
+#include "Game.h"
 
 Boss::Boss()
 {
@@ -39,21 +40,27 @@ void Boss::Death()
 {
 	QueryGOs<Bullet>("bullet", [&](Bullet* bl)->bool {
 		CVector3 v = bl->GetPos() - m_position;
-		if (v.Length() < 50.0f) {
+		if (v.Length() < 90.0f) {
 			bossHP_Count--;
 
-			//エフェクトの表示
-			prefab::CEffect* ef = NewGO<prefab::CEffect>(0);
-			ef->Play(L"effect/bossdown.efk");
-			CVector3 efPos = m_position;
-			efPos.y = 50.0f;
-			ef->SetPosition(efPos);
-
-			DeleteGO(this);
+			if (bossHP_Count == 0) {
+				//エフェクトの表示
+				prefab::CEffect* ef = NewGO<prefab::CEffect>(0);
+				ef->Play(L"effect/bossdown.efk");
+				CVector3 efPos = m_position;
+				efPos.y = 50.0f;
+				ef->SetPosition(efPos);
+				DeleteGO(this);
+			}
 			DeleteGO(bl);
 		}
 		return true;
 		});
+
+	Game* ga = FindGO<Game>("Game");
+	if (ga->m_restTimer < 0.1) {
+		DeleteGO(this);
+	}
 }
 
 

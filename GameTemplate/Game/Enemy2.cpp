@@ -21,6 +21,11 @@ bool Enemy2::Start()
 
 	m_skinModel = NewGO<prefab::CSkinModelRender>(0);
 	m_skinModel->Init(L"modelData/Enemy2.cmo", m_aninationClip, enAnim_Num);
+
+	float t = Random().GetRandDouble();
+	m_position.x = CMath::Lerp(t, -500.0f, 500.0f);
+	m_position.z = CMath::Lerp(t, 650.0f, 300.0f);
+
 	m_chraCon.Init(33.0f, 50.0f, m_position);
 	return true;
 }
@@ -41,7 +46,7 @@ void Enemy2::Death()
 {
 	QueryGOs<Bullet>("bullet", [&](Bullet* bl)->bool {
 		CVector3 v = bl->GetPos() - m_position;
-		if (v.Length() < 50.0f) {
+		if (v.Length() < 80.0f) {
 			//エフェクトの表示
 			prefab::CEffect* ef = NewGO<prefab::CEffect>(0);
 			ef->Play(L"effect/enemy2down.efk");
@@ -75,7 +80,7 @@ void Enemy2::Update()
 
 	//一定時間で敵が消える。
 	m_timer += GameTime().GetFrameDeltaTime();
-	if (m_timer > 5) {
+	if (m_timer > 8) {
 		DeleteGO(this);
 	}
 

@@ -27,7 +27,7 @@ void EnemyCreate::Update()
 	Game* ga = FindGO<Game>("Game");
 	m_enetimer += GameTime().GetFrameDeltaTime();
 	m_ene2timer += GameTime().GetFrameDeltaTime();
-	if (m_enetimer > 2) {
+	if (m_enetimer > 3) {
 		ene = NewGO<Enemy>(0, "ene");
 		m_enetimer = 0;
 	}

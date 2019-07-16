@@ -23,6 +23,10 @@ bool Enemy::Start()
 	m_skinModel->Init(L"modelData/Enemy.cmo", m_animClip, enAnim_Num);
 	m_skinModel->PlayAnimation(enAnim_walk);
 
+	float t = Random().GetRandDouble();
+	m_position.x = CMath::Lerp(t, -500.0f, 500.0f);
+	m_position.z = CMath::Lerp(t, 650.0f, 300.0f);
+
 	m_charCon.Init(20.0f, 100.0f, m_position);
 	return true;
 }

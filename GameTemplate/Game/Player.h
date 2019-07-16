@@ -31,5 +31,6 @@ private:
 	Bullet* bl = nullptr;
 	Game* ga = nullptr;
 	int bulletCount = 1000;
+	float m_timer = 0;
 };
 

@@ -3,6 +3,7 @@
 #include "Player.h"
 #include "Enemy.h"
 #include "Enemy2.h"
+#include "Boss.h"
 #include "EnemyBullet.h"
 #include "Game.h"
 
@@ -113,6 +114,29 @@ void PlayerHP::Update()
 			else if (m_sprite3 != nullptr) {
 				DeleteGO(m_sprite3);
 				DeleteGO(enebl);
+				m_sprite3 = nullptr;
+				ga->damageCount++;
+			}
+		}
+		return true;
+		});
+
+	//ƒ{ƒX‚É“–‚½‚é‚ÆHP‚ªŒ¸‚éB
+	QueryGOs<Boss>("boss", [&](Boss* bs)->bool {
+		CVector3 v = pl->GetPos() - bs->GetPos();
+		if (v.Length() < 80.0f) {
+			if (m_sprite != nullptr) {
+				DeleteGO(m_sprite);
+				m_sprite = nullptr;
+				ga->damageCount++;
+			}
+			else if (m_sprite2 != nullptr) {
+				DeleteGO(m_sprite2);
+				m_sprite2 = nullptr;
+				ga->damageCount++;
+			}
+			else if (m_sprite3 != nullptr) {
+				DeleteGO(m_sprite3);
 				m_sprite3 = nullptr;
 				ga->damageCount++;
 			}
