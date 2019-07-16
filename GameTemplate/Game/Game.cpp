@@ -28,7 +28,6 @@ Game::Game()
 	NewGO<Coin2D>(0, "Coin2D");
 	NewGO<CoinCount>(0, "CoinCount");
 	NewGO<Timer>(0, "Timer");
-	//NewGO<Coin>(0, "Coin");
 	NewGO<Stage>(0, "stage");
 	NewGO<BulletCount>(0, "blCount");
 	m_Light = NewGO<prefab::CDirectionLight>(0);
@@ -49,8 +48,8 @@ Game::~Game()
 	DeleteGO(ph);
 	EnemyCreate* eneCreate = FindGO<EnemyCreate>("eneCreate");
 	DeleteGO(eneCreate);
-	Stage* sg = FindGO<Stage>("stage");
-	DeleteGO(sg);
+	/*Stage* sg = FindGO<Stage>("stage");
+	DeleteGO(sg);*/
 	Coin2D*coin2D = FindGO<Coin2D>("Coin2D");
 	DeleteGO(coin2D);
 	Timer*m_timer = FindGO<Timer>("Timer");

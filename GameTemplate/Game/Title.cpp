@@ -96,7 +96,7 @@ void Title::Update()
 	}
 
 	m_timer2++;
-	if (m_timer2 <= 999) 
+	if (m_timer2 >= 3) 
 	{
 		color += 0.1;
 	}
@@ -115,8 +115,8 @@ void Title::Update()
 		NewGO<Game>(0, "Game");
 		fade->StartFadeOut();
 		DeleteGO(this);
-		
 	}
+	
 }
 
 
