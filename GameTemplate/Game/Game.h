@@ -48,8 +48,21 @@ public:
 	{
 		damageCount++;
 	}
+
+	int BossCoinCount()
+	{
+		return coinCount;
+	}
 	
-	int coinCount = 0; //ボスが出てくるためのコインカウント
+	void Add_BossCoinCount()
+	{
+		coinCount++;
+	}
+
+	void reset_BossCoinCount()
+	{
+		coinCount = 0;
+	}
 	
 	float m_Timer = 0;
 
@@ -61,6 +74,7 @@ public:
 
 private:
 
+	int coinCount = 0; //ボスが出てくるためのコインカウント
 	int damageCount = 0;	//プレイヤーのダメージカウント
 	bool is_GameOver = false;
 	bool is_GameClear = false;

@@ -17,6 +17,7 @@ public:
 
 private:
 	prefab::CSkinModelRender* m_skinModel = nullptr;
+	prefab::CSoundSource* m_sound = nullptr;
 	CVector3 m_position = CVector3::Zero;
 	CVector3 m_moveSpeed = CVector3::Zero;
 	CQuaternion m_rotation = CQuaternion::Identity;

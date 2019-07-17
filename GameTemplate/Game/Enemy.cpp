@@ -56,6 +56,10 @@ void Enemy::Death()
 			CVector3 efPos = m_position;
 			efPos.y = 50.0f;
 			ef->SetPosition(efPos);
+			//‰¹‚ğÄ¶
+			m_sound = NewGO<prefab::CSoundSource>(0);
+			m_sound->Init(L"sound/Enemydamege.wav");
+			m_sound->Play(false);
 
 			DeleteGO(this);
 			DeleteGO(bl);
