@@ -74,13 +74,14 @@ void Player::Death()
 	if (ga->GetdamageCount() == 3) {
 		m_timer += GameTime().GetFrameDeltaTime();
 		//一定時間エフェクトの表示
-		if (m_timer < 1.0f) {
+		/*if (m_timer < 1.0f) {
 			prefab::CEffect* ef = NewGO<prefab::CEffect>(0);
 			ef->Play(L"effect/playerdown.efk");
+			
 			CVector3 efPos = m_position;
 			efPos.y = 50.0f;
 			ef->SetPosition(efPos);
-		}
+		}*/
 	}
 }
 

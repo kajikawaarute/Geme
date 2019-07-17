@@ -1,6 +1,7 @@
 #pragma once
 class CoinCount;
 class EnemyCount;
+class Stage;
 
 class GameClear : public IGameObject
 {
@@ -13,8 +14,12 @@ public:
 
 private:
 
+	Stage* sg = nullptr;
+
 	CVector3 color;
 	CVector3 color1;
+
+	float m_timer = 0.0f;
 
 	EnemyCount* enemyGetCount = nullptr;
 	CoinCount* coinGetCount =nullptr;

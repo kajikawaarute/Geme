@@ -1,5 +1,7 @@
 #pragma once
 class Coin;
+class Game;
+
 class CoinCount : public IGameObject
 {
 public:
@@ -10,7 +12,7 @@ public:
 	void Update();
 
 	void Addcount(int coin) {
-		coinCount += coin;
+		coinCount -= coin;
 	}
 	int GetCoin()
 	{
@@ -18,8 +20,8 @@ public:
 	}
 
 private:
-
-	int coinCount = 0;
+	Game* game = nullptr;
+	int coinCount = 7;
 	//コインカウント2D
 	prefab::CFontRender* m_fontRender = nullptr;
 };

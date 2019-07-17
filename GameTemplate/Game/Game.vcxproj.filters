@@ -58,6 +58,7 @@
     <ClCompile Include="Boss.cpp" />
     <ClCompile Include="BulletCount.cpp" />
     <ClCompile Include="EnemyCount.cpp" />
+    <ClCompile Include="CoinCreate.cpp" />
   </ItemGroup>
   <ItemGroup>
     <MeshContentTask Include="Assets\modelData\Title.fbx">
@@ -138,6 +139,7 @@
     <ClInclude Include="Boss.h" />
     <ClInclude Include="BulletCount.h" />
     <ClInclude Include="EnemyCount.h" />
+    <ClInclude Include="CoinCreate.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sound.h" />

@@ -15,6 +15,7 @@
 #include "EnemyBullet.h"
 #include "GameClear.h"
 #include "EnemyCount.h"
+#include "CoinCreate.h"
 
 CVector3 cameraPos = { 0.0f, 70.0f, 200.0f };
 CVector3 cameraTarget;
@@ -22,7 +23,7 @@ CVector3 cameraTarget;
 Game::Game()
 {
 
-	NewGO<Player>(0, "player");
+	pl =NewGO<Player>(0, "player");
 	NewGO<GameCamera>(0, "GC");
 	NewGO<PlayerHP>(0, "ph");
 	NewGO<EnemyCreate>(0, "eneCreate");
@@ -32,6 +33,7 @@ Game::Game()
 	NewGO<Stage>(0, "stage");
 	NewGO<BulletCount>(0, "blCount");
 	NewGO<EnemyCount>(0, "enCount");
+	NewGO<CoinCreate>(0, "Coincreate");
 	m_Light = NewGO<prefab::CDirectionLight>(0);
 	m_Light->SetColor({ 0.5f,0.5f, 0.5f, 1.0f });
 	m_Light->SetDirection({ -0.707f,-0.707f,0.0f });
@@ -42,7 +44,7 @@ Game::Game()
 
 Game::~Game()
 {
-	Player* pl = FindGO<Player>("player");
+	
 	DeleteGO(pl);
 	GameCamera * gc = FindGO<GameCamera>("GC");
 	DeleteGO(gc);
@@ -60,10 +62,12 @@ Game::~Game()
 	DeleteGO(coinCount);
 	BulletCount* bc = FindGO<BulletCount>("blCount");
 	DeleteGO(bc);
-	Coin* coin = FindGO<Coin>("Coin");
-	DeleteGOs("Coin");
+	/*Coin* coin = FindGO<Coin>("Coin");
+	DeleteGOs("Coin");*/
 	EnemyCount*enemyCount = FindGO<EnemyCount>("enCount");
 	DeleteGO(enemyCount);
+	CoinCreate*cc = FindGO<CoinCreate>("Coincreate");
+	DeleteGO(cc);
 	
 }
 bool Game::Start()
@@ -75,12 +79,12 @@ void Game::Update()
 {
 	//postEffect::Tonemap().SetLuminance(0.02);
 
-
-	m_timer += GameTime().GetFrameDeltaTime();
-	if (m_timer > 5) {
+	
+	/*m_timer += GameTime().GetFrameDeltaTime();
+	if (m_timer > 3) {
 		m_coin =NewGO<Coin>(0, "Coin");
 		m_timer = 0;
-	}
+	}*/
 
 	if (is_GameClear == true) {
 		NewGO<GameClear>(0, "GameClear");
@@ -89,6 +93,12 @@ void Game::Update()
 
 	if (is_GameOver == true) {
 		NewGO<GameOver>(0, "GameOver");
+		prefab::CEffect* ef = NewGO<prefab::CEffect>(0);
+		ef->Play(L"effect/playerdown.efk");
+
+		
+		/*efPos.y = 50.0f;*/
+		ef->SetPosition({pl->GetPos().x,pl->GetPos().y+50.0f, pl->GetPos().z});
 		DeleteGO(this);
 	}
 

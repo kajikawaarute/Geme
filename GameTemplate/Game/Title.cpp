@@ -39,7 +39,7 @@ bool Title::Start()
 	m_spriteRender1->Init(L"sprite/botanose.dds", 1280.0f, 999.0f);
 	m_position1.y = -300;
 	m_spriteRender1->SetPosition(m_position1);
-	m_spriteRender1->SetMulColor(m_light);
+	m_spriteRender1->SetMulColor({1.0f,1.0f, 1.0f, 1.0f});
 
 	//Unityちゃん表示
 	CSkinmodel = NewGO<prefab::CSkinModelRender>(2);
@@ -85,6 +85,20 @@ bool Title::Start()
 
 void Title::Update()
 {
+
+	m_timer3++;
+	if (m_timer3 < 40)
+	{
+		m_spriteRender1->SetActiveFlag(false);
+	}
+	if (m_timer3 >= 40)
+	{
+		m_spriteRender1->SetActiveFlag(true);
+	}
+	if (m_timer3 > 79)
+	{
+		m_timer3 = 0;
+	}
 	//CSkinmodel->PlayAnimation(enAnimationClip_run, 0.5f);
 	//CSkinmodel->SetPosition(m_position3);
 	//プレイヤーの回転処理
@@ -106,7 +120,7 @@ void Title::Update()
 		color += 0.1;
 	}*/
 	
-	m_spriteRender1->SetMulColor(m_light);
+	//m_spriteRender1->SetMulColor(m_light);
 
 	//ボタン押すとゲームに行く
 	if (Pad(0).IsPress(enButtonA) == true) {

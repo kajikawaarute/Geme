@@ -1,5 +1,6 @@
 #pragma once
 class Player;
+class EnemyCount;
 class Boss : public IGameObject
 {
 public:
@@ -14,6 +15,10 @@ public:
 		return m_position;
 	}
 private:
+
+	EnemyCount*enemyCount = nullptr;
+	int Bosscount = 5;
+
 	prefab::CSkinModelRender* m_skinModel = nullptr;
 	prefab::CSoundSource* m_sound = nullptr;
 	CVector3 m_position = CVector3::Zero;
