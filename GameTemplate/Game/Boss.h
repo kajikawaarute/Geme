@@ -24,5 +24,12 @@ private:
 	int bossHP_Count = 5;
 	float m_timer = 0;
 	Player* pl = nullptr;
+
+	enum EnAnimationClip {
+		enAnim_move,	//移動アニメーション
+		enAnim_Num		//アニメーションクリップの数
+	};
+
+	CAnimationClip m_animClip[enAnim_Num];
 };
 

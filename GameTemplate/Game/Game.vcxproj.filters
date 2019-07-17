@@ -107,6 +107,9 @@
     <MeshContentTask Include="Assets\modelData\Enemy.fbx" />
     <MeshContentTask Include="Assets\modelData\GameOver.fbx" />
     <MeshContentTask Include="Assets\modelData\Overmoji.fbx" />
+    <MeshContentTask Include="Assets\modelData\Boss.fbx">
+      <Filter>Assets\modeData</Filter>
+    </MeshContentTask>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bullet.h" />

@@ -15,8 +15,12 @@ Boss::~Boss()
 
 bool Boss::Start()
 {
+	m_animClip[enAnim_move].Load(L"animData/boss_move.tka");
+	m_animClip[enAnim_move].SetLoopFlag(true);
+
 	m_skinModel = NewGO <prefab::CSkinModelRender>(0);
-	m_skinModel->Init(L"modelData/unityChan.cmo");
+	m_skinModel->Init(L"modelData/Boss.cmo", m_animClip, enAnim_Num);
+	m_skinModel->PlayAnimation(enAnim_move);
 	m_chraCon.Init(30.0f, 50.0f, m_position);
 	return true;
 }
