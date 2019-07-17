@@ -62,6 +62,8 @@ Game::~Game()
 	DeleteGO(bc);
 	Coin* coin = FindGO<Coin>("Coin");
 	DeleteGOs("Coin");
+	EnemyCount*enemyCount = FindGO<EnemyCount>("enCount");
+	DeleteGO(enemyCount);
 	
 }
 bool Game::Start()
@@ -75,7 +77,7 @@ void Game::Update()
 
 
 	m_timer += GameTime().GetFrameDeltaTime();
-	if (m_timer > 2) {
+	if (m_timer > 5) {
 		m_coin =NewGO<Coin>(0, "Coin");
 		m_timer = 0;
 	}

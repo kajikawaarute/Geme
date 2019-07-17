@@ -12,6 +12,10 @@ public:
 	{
 		enemyCount++;
 	}
+	int GetEnemy()
+	{
+		return enemyCount;
+	}
 
 private:
 	int enemyCount = 0;
