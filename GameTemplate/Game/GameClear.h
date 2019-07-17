@@ -14,7 +14,9 @@ public:
 private:
 
 	CVector3 color;
+	CVector3 color1;
 
+	EnemyCount* enemyGetCount = nullptr;
 	CoinCount* coinGetCount =nullptr;
 	prefab::CFontRender* m_fontRender = nullptr;
 	prefab::CFontRender* m_fontRender2 = nullptr;

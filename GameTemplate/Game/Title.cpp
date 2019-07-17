@@ -100,11 +100,11 @@ void Title::Update()
 		m_spriteRender->SetPosition(m_position);
 	}
 
-	
+	/*m_timer2++;
 	if (m_timer2 >= 3) 
 	{
 		color += 0.1;
-	}
+	}*/
 	
 	m_spriteRender1->SetMulColor(m_light);
 
