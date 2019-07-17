@@ -37,7 +37,7 @@ Game::Game()
 	m_Light = NewGO<prefab::CDirectionLight>(0);
 	m_Light->SetColor({ 0.5f,0.5f, 0.5f, 1.0f });
 	m_Light->SetDirection({ -0.707f,-0.707f,0.0f });
-	GraphicsEngine().GetDirectionShadowMap().SetLightDirection({ 0.0f, -1.0f, 0.0f });
+	GraphicsEngine().GetDirectionShadowMap().SetLightDirection({ 1.0f, -1.0f, 1.0f });
 	
 }
 

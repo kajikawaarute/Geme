@@ -110,7 +110,7 @@ namespace {
 		//ÉfÉBÉU
 		initParam.graphicsConfing.ditheringConfig.isEnable = true;
 		//dof
-		initParam.graphicsConfing.dofConfig.isEnable = true;
+		initParam.graphicsConfing.dofConfig.isEnable = false;
 	}
 }
 int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLine, int nCmdShow)
