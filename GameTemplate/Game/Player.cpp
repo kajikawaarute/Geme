@@ -55,6 +55,10 @@ void Player::Move()
 			bl->GetPos() = m_position;
 			bl->SetSpd(cameraFoward, 1000.0f);
 			bulletCount--;
+			
+			sound = NewGO<prefab::CSoundSource>(0);
+			sound->Init(L"sound/shot.wav");
+			sound->Play(false);
 		}
 	}
 

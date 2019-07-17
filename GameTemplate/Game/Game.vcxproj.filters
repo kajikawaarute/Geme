@@ -201,5 +201,14 @@
     <Media Include="Assets\sound\coinGet.wav">
       <Filter>Assets\sound</Filter>
     </Media>
+    <Media Include="Assets\sound\shot.wav">
+      <Filter>Assets\sound</Filter>
+    </Media>
+    <Media Include="Assets\sound\Enemydamege.wav">
+      <Filter>Assets\sound</Filter>
+    </Media>
+    <Media Include="Assets\sound\Bossdamege.wav">
+      <Filter>Assets\sound</Filter>
+    </Media>
   </ItemGroup>
 </Project>

@@ -1879,7 +1879,10 @@
     <None Include="Assets\effect\test1.efk" />
   </ItemGroup>
   <ItemGroup>
+    <Media Include="Assets\sound\Bossdamege.wav" />
     <Media Include="Assets\sound\coinGet.wav" />
+    <Media Include="Assets\sound\Enemydamege.wav" />
+    <Media Include="Assets\sound\shot.wav" />
   </ItemGroup>
   <ItemGroup>
     <ImageContentTask Include="Assets\sprite\GameOver.png" />

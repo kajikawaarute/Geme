@@ -13,7 +13,6 @@ public:
 private:
 	float m_enetimer = 0;
 	float m_ene2timer = 0;
-	bool m_flag = false;
 	Enemy* ene = nullptr;
 	Enemy2* ene2 = nullptr;
 	Boss* boss = nullptr;

@@ -84,7 +84,7 @@ void Coin::Update()
 		m_Sound->Play(false);
 		coinCount++;
 		ga = FindGO<Game>("Game");
-		ga->coinCount++;
+		ga->Add_BossCoinCount();
 		CCount->Addcount(coinCount);
 		DeleteGO(this);
 	

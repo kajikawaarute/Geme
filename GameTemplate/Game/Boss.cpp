@@ -2,7 +2,6 @@
 #include "Boss.h"
 #include "Player.h"
 #include "Bullet.h"
-#include "Timer.h"
 
 Boss::Boss()
 {
@@ -50,17 +49,22 @@ void Boss::Death()
 				CVector3 efPos = m_position;
 				efPos.y = 50.0f;
 				ef->SetPosition(efPos);
+
+				//‰¹‚ğÄ¶
+				m_sound = NewGO<prefab::CSoundSource>(0);
+				m_sound->Init(L"sound/Bossdamege.wav");
+				m_sound->Play(false);
+
 				DeleteGO(this);
 			}
 			DeleteGO(bl);
 		}
 		return true;
 		});
-
-	Timer* ti = FindGO<Timer>("Timer");
-	if (ti->GetTimer() < 0.1) {
+	/*m_timer += GameTime().GetFrameDeltaTime();
+	if (m_timer > 10.0f) {
 		DeleteGO(this);
-	}
+	}*/
 }
 
 

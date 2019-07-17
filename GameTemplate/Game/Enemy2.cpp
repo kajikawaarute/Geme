@@ -54,6 +54,11 @@ void Enemy2::Death()
 			efPos.y = 50.0f;
 			ef->SetPosition(efPos);
 
+			//‰¹‚ğÄ¶
+			m_sound = NewGO<prefab::CSoundSource>(0);
+			m_sound->Init(L"sound/Enemydamege.wav");
+			m_sound->Play(false);
+
 			DeleteGO(this);
 			DeleteGO(bl);
 		}
@@ -80,7 +85,7 @@ void Enemy2::Update()
 
 	//ˆê’èŠÔ‚Å“G‚ªÁ‚¦‚éB
 	m_timer += GameTime().GetFrameDeltaTime();
-	if (m_timer > 7) {
+	if (m_timer > 5) {
 		DeleteGO(this);
 	}
 
