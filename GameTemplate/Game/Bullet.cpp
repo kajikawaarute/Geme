@@ -23,7 +23,7 @@ bool Bullet::Start()
 
 void Bullet::Update()
 {
-	m_speed.y = 70.0f;
+	m_speed.y = 50.0f;
 	m_position += m_speed;
 
 	//ˆê’èŠÔ‚µ‚½‚çÁ‚¦‚é

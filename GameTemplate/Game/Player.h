@@ -33,6 +33,7 @@ private:
 	CCharacterController m_charCon;
 	Bullet* bl = nullptr;
 	Game* ga = nullptr;
-	int bulletCount = 1000;
+	int bulletCount = 100;
+	float m_timer = 0;
 };
 

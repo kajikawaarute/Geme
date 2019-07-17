@@ -3,6 +3,7 @@
 #include "Player.h"
 #include "Enemy.h"
 #include "Enemy2.h"
+#include "Boss.h"
 #include "EnemyBullet.h"
 #include "Game.h"
 
@@ -34,6 +35,9 @@ bool PlayerHP::Start()
 
 void PlayerHP::Update()
 {
+	if (muteki) {
+		m_timer += GameTime().GetFrameDeltaTime();
+	}
 	m_position.x = -570.0f;
 	m_position.y = -300.0f;
 
@@ -42,85 +46,116 @@ void PlayerHP::Update()
 
 	m_position3.x = -370.0f;
 	m_position3.y = -300.0f;
-
+	if (m_timer >= 1.0f) {
+		m_timer = 0.0f;
+		muteki = false;
+	}
 	Player* pl = FindGO<Player>("player");
 	Game* ga = FindGO<Game>("Game");
+	if (!muteki) {
+		//エネミー１に当たるとHPが減る。
+		QueryGOs<Enemy>("ene", [&](Enemy* ene)->bool {
+			CVector3 v = pl->GetPos() - ene->GetPos();
+			if (v.Length() < 80.0f) {
+				muteki = true;
+				if (m_sprite != nullptr) {
+					DeleteGO(m_sprite);
+					m_sprite = nullptr;
+					ga->Add_damageCount();
+				}
 
-	//エネミー１に当たるとHPが減る。
-	QueryGOs<Enemy>("ene", [&](Enemy* ene)->bool {
-		CVector3 v = pl->GetPos() - ene->GetPos();
-		if (v.Length() < 80.0f) {
-			if (m_sprite != nullptr) {
-				DeleteGO(m_sprite);
-				m_sprite = nullptr;
-				ga->Add_damageCount();
+				else if (m_sprite2 != nullptr) {
+					DeleteGO(m_sprite2);
+					m_sprite2 = nullptr;
+					ga->Add_damageCount();
+				}
+				else if (m_sprite3 != nullptr) {
+					DeleteGO(m_sprite3);
+					m_sprite3 = nullptr;
+					//ga->SetdamageCount(ga->GetdamageCount()+1);
+					ga->Add_damageCount();
+				}
 			}
-			else if (m_sprite2 != nullptr) {
-				DeleteGO(m_sprite2);
-				m_sprite2 = nullptr;
-				ga->Add_damageCount();
-			}
-			else if (m_sprite3 != nullptr) {
-				DeleteGO(m_sprite3);
-				m_sprite3 = nullptr;
-				//ga->SetdamageCount(ga->GetdamageCount()+1);
-				ga->Add_damageCount();
-			}
-		}
 
-		return true;
-		});
+			return true;
+			});
 
-	//エネミー２に当たるとがHPが減る。
-	QueryGOs<Enemy2>("ene2", [&](Enemy2* ene2)->bool {
-		CVector3 v = pl->GetPos() - ene2->GetPos();
-		if (v.Length() < 80.0f) {
-			if (m_sprite != nullptr) {
-				DeleteGO(m_sprite);
-				m_sprite = nullptr;
-				ga->Add_damageCount();
+		//エネミー２に当たるとがHPが減る。
+		QueryGOs<Enemy2>("ene2", [&](Enemy2* ene2)->bool {
+			CVector3 v = pl->GetPos() - ene2->GetPos();
+			if (v.Length() < 80.0f) {
+				muteki = true;
+				if (m_sprite != nullptr) {
+					DeleteGO(m_sprite);
+					m_sprite = nullptr;
+					ga->Add_damageCount();
+				}
+				else if (m_sprite2 != nullptr) {
+					DeleteGO(m_sprite2);
+					m_sprite2 = nullptr;
+					ga->Add_damageCount();
+				}
+				else if (m_sprite3 != nullptr) {
+					DeleteGO(m_sprite3);
+					m_sprite3 = nullptr;
+					ga->Add_damageCount();
+				}
 			}
-			else if (m_sprite2 != nullptr) {
-				DeleteGO(m_sprite2);
-				m_sprite2 = nullptr;
-				ga->Add_damageCount();
-			}
-			else if (m_sprite3 != nullptr) {
-				DeleteGO(m_sprite3);
-				m_sprite3 = nullptr;
-				ga->Add_damageCount();
-			}
-		}
-		return true;
-		});
+			return true;
+			});
 
-	//エネミーの弾丸に当たるとHPが減る。
-	QueryGOs<EnemyBullet>("enebl", [&](EnemyBullet* enebl)->bool {
-		CVector3 v = pl->GetPos() - enebl->Getpos();
-		if (v.Length() < 80.0f) {
-			if (m_sprite != nullptr) {
-				DeleteGO(m_sprite);
-				DeleteGO(enebl);
-				m_sprite = nullptr;
-				ga->Add_damageCount();
-				
-			}
-			else if (m_sprite2 != nullptr) {
-				DeleteGO(m_sprite2);
-				DeleteGO(enebl);
-				m_sprite2 = nullptr;
-				ga->Add_damageCount();
-			}
-			else if (m_sprite3 != nullptr) {
-				DeleteGO(m_sprite3);
-				DeleteGO(enebl);
-				m_sprite3 = nullptr;
-				ga->Add_damageCount();
-			}
-		}
-		return true;
-		});
+		//エネミーの弾丸に当たるとHPが減る。
+		QueryGOs<EnemyBullet>("enebl", [&](EnemyBullet* enebl)->bool {
+			CVector3 v = pl->GetPos() - enebl->Getpos();
+			if (v.Length() < 90.0f) {
+				muteki = true;
+				if (m_sprite != nullptr) {
+					DeleteGO(m_sprite);
+					DeleteGO(enebl);
+					m_sprite = nullptr;
+					ga->Add_damageCount();
 
+				}
+				else if (m_sprite2 != nullptr) {
+					DeleteGO(m_sprite2);
+					DeleteGO(enebl);
+					m_sprite2 = nullptr;
+					ga->Add_damageCount();
+				}
+				else if (m_sprite3 != nullptr) {
+					DeleteGO(m_sprite3);
+					DeleteGO(enebl);
+					m_sprite3 = nullptr;
+					ga->Add_damageCount();
+				}
+			}
+			return true;
+			});
+
+		//ボスに当たるとHPが減る。
+		QueryGOs<Boss>("boss", [&](Boss* bs)->bool {
+			CVector3 v = pl->GetPos() - bs->GetPos();
+			if (v.Length() < 80.0f) {
+				muteki = true;
+				if (m_sprite != nullptr) {
+					DeleteGO(m_sprite);
+					m_sprite = nullptr;
+					ga->Add_damageCount();
+				}
+				else if (m_sprite2 != nullptr) {
+					DeleteGO(m_sprite2);
+					m_sprite2 = nullptr;
+					ga->Add_damageCount();
+				}
+				else if (m_sprite3 != nullptr) {
+					DeleteGO(m_sprite3);
+					m_sprite3 = nullptr;
+					ga->Add_damageCount();
+				}
+			}
+			return true;
+			});
+	}
 	if (m_sprite != nullptr) {
 		m_sprite->SetPosition(m_position);
 	}
