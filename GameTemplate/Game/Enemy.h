@@ -1,5 +1,6 @@
 #pragma once
 class Player;
+class EnemyCount;
 class Enemy : public IGameObject
 {
 public:
@@ -27,6 +28,7 @@ private:
 	int m_bltimer = 0;
 
 	Player* pl = nullptr;
+	EnemyCount*ECount = nullptr;
 
 	enum EnAnimationClip {
 		enAnim_walk,	//歩きアニメーション

@@ -15,7 +15,7 @@ CoinCount::~CoinCount()
 bool CoinCount::Start()
 {
 	m_fontRender = NewGO<prefab::CFontRender>(0);
-	m_fontRender->SetPosition({ 390,305 });
+	m_fontRender->SetPosition({ 454,305 });
 	
 	return true;
 }

@@ -18,8 +18,8 @@ public:
 	}
 
 private:
+
 	int coinCount = 0;
-	int c = 1;
 	//コインカウント2D
 	prefab::CFontRender* m_fontRender = nullptr;
 };
