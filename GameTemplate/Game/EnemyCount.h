@@ -12,10 +12,17 @@ public:
 	{
 		enemyCount++;
 	}
+	int BossCount(int num) 
+	{
+		return enemyCount += num;
+		
+	}
+
 	int GetEnemy()
 	{
 		return enemyCount;
 	}
+
 
 private:
 	int enemyCount = 0;

@@ -36,6 +36,8 @@ void GameOver::Update()
 {
 
 	m_timer += GameTime().GetFrameDeltaTime();
+
+	//•¶Žš—Ž‚¿‚é
 	if (m_timer <= 2.0f) {
 		m_position.y -= 2.0f;
 		m_sprite->SetPosition(m_position);

@@ -3,6 +3,7 @@
 #include "Player.h"
 #include "Bullet.h"
 #include "EnemyBullet.h"
+#include "EnemyCount.h"
 
 Enemy2::Enemy2()
 {
@@ -16,6 +17,7 @@ Enemy2::~Enemy2()
 
 bool Enemy2::Start()
 {
+	enemygetCount = FindGO<EnemyCount>("enCount");
 	m_aninationClip[enAnim_rotation].Load(L"animData/enemy2_rotation.tka");
 	m_aninationClip[enAnim_rotation].SetLoopFlag(true);
 
@@ -53,7 +55,7 @@ void Enemy2::Death()
 			CVector3 efPos = m_position;
 			efPos.y = 50.0f;
 			ef->SetPosition(efPos);
-
+			enemygetCount->Add_enemyCount();
 			//‰¹‚ğÄ¶
 			m_sound = NewGO<prefab::CSoundSource>(0);
 			m_sound->Init(L"sound/Enemydamege.wav");

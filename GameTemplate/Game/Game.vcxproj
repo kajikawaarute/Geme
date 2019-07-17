@@ -1595,7 +1595,8 @@
       <ContentOutput>%(RelativeDir)/%(Filename).dds</ContentOutput>
     </ImageContentTask>
     <CustomBuild>
-      <Command>call $(ProjectDir)..\tkTools\tkContentTools.bat %(Identity) $(OutDir)</Command>
+      <Command>
+      </Command>
     </CustomBuild>
     <CustomBuild>
       <Message>tkContentTools</Message>
@@ -1653,7 +1654,8 @@
       <ContentOutput>%(RelativeDir)/%(Filename).dds</ContentOutput>
     </ImageContentTask>
     <CustomBuild>
-      <Command>call $(ProjectDir)..\tkTools\tkContentTools.bat %(Identity) $(OutDir)</Command>
+      <Command>
+      </Command>
     </CustomBuild>
     <CustomBuild>
       <Message>tkContentTools</Message>
@@ -1768,6 +1770,7 @@
     <ClCompile Include="Coin.cpp" />
     <ClCompile Include="Coin2D.cpp" />
     <ClCompile Include="CoinCount.cpp" />
+    <ClCompile Include="CoinCreate.cpp" />
     <ClCompile Include="Enemy.cpp" />
     <ClCompile Include="Enemy2.cpp" />
     <ClCompile Include="EnemyBullet.cpp" />
@@ -1812,6 +1815,7 @@
     <ClInclude Include="Coin.h" />
     <ClInclude Include="Coin2D.h" />
     <ClInclude Include="CoinCount.h" />
+    <ClInclude Include="CoinCreate.h" />
     <ClInclude Include="Enemy.h" />
     <ClInclude Include="Enemy2.h" />
     <ClInclude Include="EnemyBullet.h" />

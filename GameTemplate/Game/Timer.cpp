@@ -31,7 +31,7 @@ void Timer::Update()
 
 	if (timer <= 0.0f) {
 		timer = 0.0f;
-		m_Game->SetGameClear(true);
+		m_Game->SetGameOver(true);
 	}
 
 	wchar_t text[100];

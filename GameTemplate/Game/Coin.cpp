@@ -89,7 +89,7 @@ void Coin::Update()
 		DeleteGO(this);
 	
 	}
-	
+
 }
 
 

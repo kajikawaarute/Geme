@@ -3,6 +3,8 @@
 #include "Game.h"
 #include "CoinCount.h"
 #include "EnemyCount.h"
+#include "Title.h"
+#include "Stage.h"
 
 GameClear::GameClear()
 {
@@ -12,6 +14,8 @@ GameClear::GameClear()
 
 GameClear::~GameClear()
 {
+	sg = FindGO<Stage>("stage");
+	DeleteGO(sg);
 	DeleteGO(m_spriteRender);
 	DeleteGO(m_fontRender);
 	DeleteGO(m_fontRender2);
@@ -41,9 +45,9 @@ bool GameClear::Start()
 	int enemyCount = enemyGetCount->GetEnemy();
 
 
-	wchar_t text[256];
+	/*wchar_t text[256];
 	swprintf(text, L"ƒRƒCƒ“‚ÌŠl“¾”@@@%d", coinCount);
-	m_fontRender->SetText(text);
+	m_fontRender->SetText(text);*/
 
 	wchar_t text1[256];
 	swprintf(text1, L"ŽG‹›“GŒ‚”j”@@@  %d", enemyCount);
@@ -55,5 +59,9 @@ bool GameClear::Start()
 
 void GameClear::Update()
 {
-
+	m_timer += GameTime().GetFrameDeltaTime();
+	if (m_timer > 2) {
+		DeleteGO(this);
+		NewGO<Title>(0, "Title");
+	}
 }

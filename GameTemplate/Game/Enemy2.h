@@ -1,4 +1,5 @@
 #pragma once
+class EnemyCount;
 class Enemy2 : public IGameObject
 {
 public:
@@ -14,6 +15,7 @@ public:
 		return m_position;
 	}
 private:
+	EnemyCount* enemygetCount = nullptr;
 	prefab::CSkinModelRender* m_skinModel = nullptr;
 	prefab::CSoundSource* m_sound = nullptr;
 	CVector3 m_position = CVector3::Zero;

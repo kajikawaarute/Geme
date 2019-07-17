@@ -2,6 +2,7 @@
 #include "Boss.h"
 #include "Player.h"
 #include "Bullet.h"
+#include "EnemyCount.h"
 
 Boss::Boss()
 {
@@ -15,6 +16,7 @@ Boss::~Boss()
 
 bool Boss::Start()
 {
+	enemyCount = FindGO<EnemyCount>("enCount");
 	m_animClip[enAnim_move].Load(L"animData/boss_move.tka");
 	m_animClip[enAnim_move].SetLoopFlag(true);
 
@@ -53,7 +55,8 @@ void Boss::Death()
 				CVector3 efPos = m_position;
 				efPos.y = 50.0f;
 				ef->SetPosition(efPos);
-
+				Bosscount++;
+				enemyCount->BossCount(Bosscount);
 				//‰¹‚ğÄ¶
 				m_sound = NewGO<prefab::CSoundSource>(0);
 				m_sound->Init(L"sound/Bossdamege.wav");

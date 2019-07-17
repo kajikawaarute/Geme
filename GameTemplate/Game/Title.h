@@ -22,6 +22,7 @@ private:
 
 	float m_timer = 0.0f;
 	float m_timer2 = 0.0f;
+	int m_timer3 = 0;
 	float AngleY = 0.0f;
 	float color = 0.1f;
 

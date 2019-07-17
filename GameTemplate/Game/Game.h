@@ -5,7 +5,7 @@
 #include "tkEngine/character/tkCharacterController.h"
 class Coin;
 class CoinCount;
-
+class Player;
 class Game : public IGameObject
 
 {
@@ -71,7 +71,7 @@ public:
 	{
 		return m_restTimer;
 	}
-
+	Player*pl = nullptr;
 private:
 
 	int coinCount = 0; //ボスが出てくるためのコインカウント
