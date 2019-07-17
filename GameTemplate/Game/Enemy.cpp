@@ -3,6 +3,7 @@
 #include "Player.h"
 #include "Bullet.h"
 #include "EnemyBullet.h"
+#include "EnemyCount.h"
 
 Enemy::Enemy()
 {
@@ -16,6 +17,8 @@ Enemy::~Enemy()
 
 bool Enemy::Start()
 {
+	ECount = FindGO<EnemyCount>("enCount");
+
 	m_animClip[enAnim_walk].Load(L"animData/enemy_walk.tka");
 	m_animClip[enAnim_walk].SetLoopFlag(true);
 
@@ -56,7 +59,7 @@ void Enemy::Death()
 			CVector3 efPos = m_position;
 			efPos.y = 50.0f;
 			ef->SetPosition(efPos);
-
+			ECount->Add_enemyCount();
 			DeleteGO(this);
 			DeleteGO(bl);
 		}

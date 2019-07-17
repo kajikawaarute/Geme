@@ -57,6 +57,7 @@
     <ClCompile Include="Enemy2.cpp" />
     <ClCompile Include="Boss.cpp" />
     <ClCompile Include="BulletCount.cpp" />
+    <ClCompile Include="EnemyCount.cpp" />
   </ItemGroup>
   <ItemGroup>
     <MeshContentTask Include="Assets\modelData\Title.fbx">
@@ -133,6 +134,7 @@
     <ClInclude Include="Enemy2.h" />
     <ClInclude Include="Boss.h" />
     <ClInclude Include="BulletCount.h" />
+    <ClInclude Include="EnemyCount.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sound.h" />
@@ -199,10 +201,5 @@
     <Media Include="Assets\sound\coinGet.wav">
       <Filter>Assets\sound</Filter>
     </Media>
-  </ItemGroup>
-  <ItemGroup>
-    <Image Include="Assets\sprite\Title.jpg">
-      <Filter>Assets\sprite</Filter>
-    </Image>
   </ItemGroup>
 </Project>

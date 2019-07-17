@@ -22,10 +22,10 @@ private:
 
 	float m_timer = 0.0f;
 	float m_timer2 = 0.0f;
-	
 	float AngleY = 0.0f;
-
 	float color = 0.1f;
+
+	bool StartFlag = false;
 
 	CVector3 m_position = CVector3::Zero;
 	CVector3 m_position1 = CVector3::Zero;

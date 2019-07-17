@@ -71,7 +71,12 @@ bool Title::Start()
 	m_Sound = NewGO<prefab::CSoundSource>(0);
 	m_Sound->Init(L"sound/Title.wav");
 	m_Sound->Play(true);
-	
+
+	//効果音。
+	m_Sound1 = NewGO<prefab::CSoundSource>(0);
+	m_Sound1->Init(L"sound/Button.wav");
+
+	//フェイド
 	fade = NewGO<Fade>(5, "Fade");
 	fade->StartFadeIn();
 	return true;
@@ -95,7 +100,7 @@ void Title::Update()
 		m_spriteRender->SetPosition(m_position);
 	}
 
-	m_timer2++;
+	
 	if (m_timer2 >= 3) 
 	{
 		color += 0.1;
@@ -108,15 +113,19 @@ void Title::Update()
 		//アニメーション再生
 		//CSkinmodel->PlayAnimation(enAnimationClip_jump, false);
 		//ボタンを押すと効果音再生
-		m_Sound1 = NewGO<prefab::CSoundSource>(0);
-		m_Sound1->Init(L"sound/Button.wav");
 		m_Sound1->Play(false);
-		//ゲームに移動
-		NewGO<Game>(0, "Game");
 		fade->StartFadeOut();
-		DeleteGO(this);
+		StartFlag = true;
 	}
-	
+	if (StartFlag == true) {
+		m_timer2 += GameTime().GetFrameDeltaTime();
+		if (m_timer2 >= 1.0f)
+		{
+			//ゲームに移動
+			NewGO<Game>(0, "Game");
+			DeleteGO(this);
+		}
+	}
 }
 
 
