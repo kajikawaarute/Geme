@@ -2,7 +2,6 @@
 class Enemy;
 class Enemy2;
 class Boss;
-class Coin;
 class EnemyCreate : public IGameObject
 {
 public:
@@ -16,6 +15,5 @@ private:
 	Enemy* ene = nullptr;
 	Enemy2* ene2 = nullptr;
 	Boss* boss = nullptr;
-	Coin* coin = nullptr;
 };
 

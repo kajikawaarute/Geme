@@ -54,15 +54,15 @@ void GameCamera::Update()
 
 	//YŽ²Žü‚è
 	CQuaternion qRot;
-	qRot.SetRotationDeg(CVector3::AxisY, 2.0f * x);
+	qRot.SetRotationDeg(CVector3::AxisY, 4.0f * x);
 	qRot.Multiply(m_toCameraPos);
 
 	//XŽ²Žü‚è
-	CVector3 axisX;
+	/*CVector3 axisX;
 	axisX.Cross(CVector3::AxisY, m_toCameraPos);
 	axisX.Normalize();
-	qRot.SetRotationDeg(axisX, 2.0f * y);
-	qRot.Multiply(m_toCameraPos);
+	qRot.SetRotationDeg(axisX, 4.0f * y);
+	qRot.Multiply(m_toCameraPos);*/
 
 	CVector3 toPosDir = m_toCameraPos;
 	toPosDir.Normalize();

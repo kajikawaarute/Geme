@@ -3,7 +3,6 @@
 #include "Enemy.h"
 #include "Enemy2.h"
 #include "Boss.h"
-#include "Coin.h"
 #include "Game.h"
 
 EnemyCreate::EnemyCreate()
