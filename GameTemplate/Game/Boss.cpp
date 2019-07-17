@@ -2,7 +2,7 @@
 #include "Boss.h"
 #include "Player.h"
 #include "Bullet.h"
-#include "Game.h"
+#include "Timer.h"
 
 Boss::Boss()
 {
@@ -57,10 +57,10 @@ void Boss::Death()
 		return true;
 		});
 
-	/*Game* ga = FindGO<Game>("Game");
-	if (ga->m_restTimer < 0.1) {
+	Timer* ti = FindGO<Timer>("Timer");
+	if (ti->GetTimer() < 0.1) {
 		DeleteGO(this);
-	}*/
+	}
 }
 
 

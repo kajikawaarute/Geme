@@ -13,9 +13,6 @@ EnemyCreate::EnemyCreate()
 
 EnemyCreate::~EnemyCreate()
 {
-	DeleteGO(ene);
-	DeleteGO(ene2);
-	DeleteGO(boss);
 }
 
 bool EnemyCreate::Start()
@@ -35,7 +32,7 @@ void EnemyCreate::Update()
 			m_enetimer = 0;
 		}
 	}
-	if (m_ene2timer > 5) {
+	if (m_ene2timer > 6) {
 		if (m_flag == false) {
 			ene2 = NewGO<Enemy2>(0, "ene2");
 			m_ene2timer = 0;

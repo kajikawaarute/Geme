@@ -80,7 +80,7 @@ void Enemy2::Update()
 
 	//ˆê’èŽžŠÔ‚Å“G‚ªÁ‚¦‚éB
 	m_timer += GameTime().GetFrameDeltaTime();
-	if (m_timer > 8) {
+	if (m_timer > 7) {
 		DeleteGO(this);
 	}
 
