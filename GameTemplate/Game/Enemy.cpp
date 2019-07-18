@@ -89,11 +89,11 @@ void Enemy::Update()
 	Death();
 	//Shoot();
 
-	//ˆê’èŽžŠÔ‚Å“G‚ªÁ‚¦‚éB
-	m_timer += GameTime().GetFrameDeltaTime();
-	if (m_timer > 5) {
-		DeleteGO(this);
-	}
+	////ˆê’èŽžŠÔ‚Å“G‚ªÁ‚¦‚éB
+	//m_timer += GameTime().GetFrameDeltaTime();
+	//if (m_timer > 5) {
+	//	DeleteGO(this);
+	//}
 
 	m_skinModel->SetPosition(m_position);
 	m_skinModel->SetRotation(m_rotation);

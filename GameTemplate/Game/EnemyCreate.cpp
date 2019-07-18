@@ -12,6 +12,8 @@ EnemyCreate::EnemyCreate()
 
 EnemyCreate::~EnemyCreate()
 {
+	DeleteGOs("ene");
+	DeleteGOs("ene2");
 	DeleteGOs("boss");
 }
 

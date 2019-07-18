@@ -6,6 +6,7 @@
 class Coin;
 class CoinCount;
 class Player;
+class Enemy2;
 class Game : public IGameObject
 
 {
