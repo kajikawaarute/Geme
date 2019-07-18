@@ -88,7 +88,7 @@ void Player::Death()
 void Player::Update()
 {
 	Move();
-	Death();
+	//Death();
 
 	m_position = m_charCon.Execute(m_moveSpeed);
 	m_skinModel->SetPosition(m_position);

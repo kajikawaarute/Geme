@@ -34,9 +34,13 @@ Game::Game()
 	NewGO<BulletCount>(0, "blCount");
 	NewGO<EnemyCount>(0, "enCount");
 	NewGO<CoinCreate>(0, "Coincreate");
+
+	//BGM‚ğÄ¶
 	m_sound = NewGO<prefab::CSoundSource>(0);
 	m_sound->Init(L"sound/GameBgm (online-audio-converter.com).wav");
 	m_sound->Play(true);
+
+	//ƒ‰ƒCƒg‚ğ•\¦
 	m_Light = NewGO<prefab::CDirectionLight>(0);
 	m_Light->SetColor({ 0.5f,0.5f, 0.5f, 1.0f });
 	m_Light->SetDirection({ -0.707f,-0.707f,0.0f });
@@ -103,6 +107,11 @@ void Game::Update()
 		
 		/*efPos.y = 50.0f;*/
 		ef->SetPosition({pl->GetPos().x,pl->GetPos().y+50.0f, pl->GetPos().z});
+
+		m_Psound = NewGO<prefab::CSoundSource>(0);
+		m_Psound->Init(L"sound/Playerdamege.wav");
+		m_Psound->Play(false);
+
 		DeleteGO(this);
 	}
 
