@@ -82,6 +82,7 @@ private:
 	float m_timer = 0;
 	Coin*m_coin = nullptr;
 	
+	prefab::CSoundSource* m_sound = nullptr;
 	prefab::CDirectionLight* m_Light = nullptr;
 
 };

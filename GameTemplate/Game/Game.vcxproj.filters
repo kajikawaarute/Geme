@@ -215,5 +215,8 @@
     <Media Include="Assets\sound\Bossdamege.wav">
       <Filter>Assets\sound</Filter>
     </Media>
+    <Media Include="Assets\sound\GameBgm (online-audio-converter.com).wav">
+      <Filter>Assets\sound</Filter>
+    </Media>
   </ItemGroup>
 </Project>
