@@ -215,6 +215,15 @@
     <Media Include="Assets\sound\Bossdamege.wav">
       <Filter>Assets\sound</Filter>
     </Media>
+    <Media Include="Assets\sound\GameBgm (online-audio-converter.com).wav">
+      <Filter>Assets\sound</Filter>
+    </Media>
+    <Media Include="Assets\sound\Playerdamege.wav">
+      <Filter>Assets\sound</Filter>
+    </Media>
+    <Media Include="Assets\sound\Enemyshot.wav">
+      <Filter>Assets\sound</Filter>
+    </Media>
     <Media Include="Assets\sound\GameOver.wav">
       <Filter>Assets\sound</Filter>
     </Media>

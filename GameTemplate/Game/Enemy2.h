@@ -18,6 +18,7 @@ private:
 	EnemyCount* enemygetCount = nullptr;
 	prefab::CSkinModelRender* m_skinModel = nullptr;
 	prefab::CSoundSource* m_sound = nullptr;
+	prefab::CSoundSource* m_sound2 = nullptr;
 	CVector3 m_position = CVector3::Zero;
 	CVector3 m_moveSpeed = CVector3::Zero;
 	CCharacterController m_chraCon;

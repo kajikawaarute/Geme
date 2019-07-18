@@ -1891,6 +1891,9 @@
     <Media Include="Assets\sound\Enemydamege.wav" />
     <Media Include="Assets\sound\GameClear.wav" />
     <Media Include="Assets\sound\GameOver.wav" />
+    <Media Include="Assets\sound\Enemyshot.wav" />
+    <Media Include="Assets\sound\GameBgm (online-audio-converter.com).wav" />
+    <Media Include="Assets\sound\Playerdamege.wav" />
     <Media Include="Assets\sound\shot.wav" />
   </ItemGroup>
   <ItemGroup>

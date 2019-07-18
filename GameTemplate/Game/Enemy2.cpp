@@ -76,6 +76,10 @@ void Enemy2::Shoot()
 		enebl->Getpos() = m_position;
 		//enebl->SetSpd(, 1000.0f);
 		m_bltimer = 0;
+
+		m_sound2 = NewGO<prefab::CSoundSource>(0);
+		m_sound2->Init(L"sound/Enemyshot.wav");
+		m_sound2->Play(false);
 	}
 }
 
