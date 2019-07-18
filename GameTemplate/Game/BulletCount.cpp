@@ -21,9 +21,12 @@ bool BulletCount::Start()
 
 void BulletCount::Update()
 {
+	color.x = 1.0;
+	color.y = 1.0;
 	wchar_t text[64];
 	Player* pl = FindGO<Player>("player");
 	swprintf(text, L"’e” %d", pl->GetBullet());
+	m_font->SetColor(color);
 	m_font->SetText(text);
 	
 }

@@ -215,5 +215,11 @@
     <Media Include="Assets\sound\Bossdamege.wav">
       <Filter>Assets\sound</Filter>
     </Media>
+    <Media Include="Assets\sound\GameOver.wav">
+      <Filter>Assets\sound</Filter>
+    </Media>
+    <Media Include="Assets\sound\GameClear.wav">
+      <Filter>Assets\sound</Filter>
+    </Media>
   </ItemGroup>
 </Project>

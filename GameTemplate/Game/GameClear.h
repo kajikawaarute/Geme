@@ -25,6 +25,16 @@ private:
 	CoinCount* coinGetCount =nullptr;
 	prefab::CFontRender* m_fontRender = nullptr;
 	prefab::CFontRender* m_fontRender2 = nullptr;
+
+
+	//
+	prefab::CFontRender* m_fontRender3 = nullptr;
+	prefab::CFontRender* m_fontRender4 = nullptr;
+	prefab::CFontRender* m_fontRender5 = nullptr;
+
+
 	prefab::CSpriteRender*m_spriteRender = nullptr;
+	//ƒTƒEƒ“ƒh
+	prefab::CSoundSource* m_Sound = nullptr;
 };
 

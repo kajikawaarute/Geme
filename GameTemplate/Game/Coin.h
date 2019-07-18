@@ -35,6 +35,6 @@ private:
 	//ƒTƒEƒ“ƒh
 	prefab::CSoundSource* m_Sound = nullptr;
 
-	CVector3 light = {1.8f,1.8f,0.12f};
+	CVector3 light = {0.6f,0.6f,0.12f};
 };
 

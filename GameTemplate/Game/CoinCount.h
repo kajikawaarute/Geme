@@ -19,8 +19,11 @@ public:
 		return coinCount;
 	}
 
+
+
 private:
 	Game* game = nullptr;
+	CVector3 m_color;
 	int coinCount = 7;
 	//コインカウント2D
 	prefab::CFontRender* m_fontRender = nullptr;

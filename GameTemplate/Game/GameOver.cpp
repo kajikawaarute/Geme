@@ -16,6 +16,7 @@ GameOver::~GameOver()
 	DeleteGO(m_sprite);
 	Stage* sg = FindGO<Stage>("stage");
 	DeleteGO(sg);
+	DeleteGO(m_Sound);
 }
 
 
@@ -26,6 +27,11 @@ bool GameOver::Start()
 	m_sprite->Init(L"sprite/GameOver.dds", 1200.0f, 780.0f);
 	m_position.y = 199;
 	m_sprite->SetPosition(m_position);
+
+	//‰¹Šy
+	m_Sound = NewGO<prefab::CSoundSource>(0);
+	m_Sound->Init(L"sound/GameOver.wav");
+	m_Sound->Play(false);
 
 	return true;
 
@@ -42,7 +48,7 @@ void GameOver::Update()
 		m_position.y -= 2.0f;
 		m_sprite->SetPosition(m_position);
 	}
-	if (m_timer > 4.0f) {
+	if (m_timer > 4.5f) {
 		DeleteGO(this);
 		NewGO<Title>(0, "Title");
 	}

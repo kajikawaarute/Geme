@@ -55,11 +55,11 @@ void Coin::Update()
 	m_timer++;
 	if (m_timer <= 30)
 	{
-		light += {1.8f / 30.0f, 1.8f / 30.0f, 0.12f / 30.0f};
+		light += {0.6f / 30.0f, 0.6f / 30.0f, 0.12f / 30.0f};
 	}
 	if (m_timer > 30)
 	{
-		light -= {1.8f / 30.0f, 1.8f / 30.0f, 0.12f / 30.0f};
+		light -= {0.6f / 30.0f, 0.6f / 30.0f, 0.12f / 30.0f};
 	}
 	if (m_timer == 60) {
 

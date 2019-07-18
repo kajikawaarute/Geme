@@ -16,6 +16,7 @@ public:
 		m_Speed = s * a;
 	}
 private:
+
 	prefab::CSkinModelRender* m_skinModel = nullptr;
 	CCharacterController m_ChraCon;
 	CVector3 m_position = CVector3::Zero;

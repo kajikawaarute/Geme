@@ -25,6 +25,7 @@ public:
 
 
 private:
+	CVector3 m_color;
 	int enemyCount = 0;
 	//エネミーカウント
 	prefab::CFontRender*m_fontRender = nullptr;

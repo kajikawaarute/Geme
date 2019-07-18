@@ -11,8 +11,9 @@ public:
 	}
 private:
 
+	CVector3 color;
 	int blCount = 0;
 	prefab::CFontRender* m_font = nullptr;
-	CVector2 m_position = { -600.0f, 150.0f };
+	CVector2 m_position = { -620.0f, -200.0f };
 };
 

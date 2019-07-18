@@ -17,6 +17,8 @@ bool EnemyCount::Start()
 	m_fontRender = NewGO<prefab::CFontRender>(0);
 	m_fontRender->SetPosition({ 280,250 });
 
+	m_color.x = 1.0f;
+	m_fontRender->SetColor(m_color);
 	return true;
 }
 

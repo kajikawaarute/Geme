@@ -1714,7 +1714,8 @@
       <ContentOutput>%(RelativeDir)/%(Filename).dds</ContentOutput>
     </ImageContentTask>
     <CustomBuild>
-      <Command>call $(ProjectDir)..\tkTools\tkContentTools.bat %(Identity) $(OutDir)</Command>
+      <Command>
+      </Command>
     </CustomBuild>
     <CustomBuild>
       <Message>tkContentTools</Message>
@@ -1888,6 +1889,8 @@
     <Media Include="Assets\sound\Bossdamege.wav" />
     <Media Include="Assets\sound\coinGet.wav" />
     <Media Include="Assets\sound\Enemydamege.wav" />
+    <Media Include="Assets\sound\GameClear.wav" />
+    <Media Include="Assets\sound\GameOver.wav" />
     <Media Include="Assets\sound\shot.wav" />
   </ItemGroup>
   <ItemGroup>
